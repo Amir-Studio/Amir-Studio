@@ -1,105 +1,152 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="AmirStudio — طراحی و توسعه تجربه‌های دیجیتال با نگاه دقیق، مینیمال و ماندگار.">
-<title>AmirStudio — Design · Build · Elevate</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="AmirStudio؛ طراحی و توسعه وب‌سایت‌ها و تجربه‌های دیجیتال با رویکردی دقیق، مینیمال و ماندگار.">
+  <meta property="og:title" content="AmirStudio — Design. Build. Elevate.">
+  <meta property="og:description" content="از ایده تا تجربه‌ای دیجیتال؛ با دقت در طراحی، ساخت و جزئیات.">
+  <meta property="og:type" content="website">
+  <title>AmirStudio — Design. Build. Elevate.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="grain"></div>
-<header class="header">
-  <a class="brand" href="#home" aria-label="AmirStudio">
-    <img src="assets/amir-studio-logo.png" alt="AmirStudio logo">
-    <span>AMIR<span>STUDIO</span></span>
-  </a>
-  <div class="header-actions" dir="ltr">
-    <button class="settings-btn" id="settingsToggle" aria-label="تنظیمات" aria-expanded="false">◌</button>
-    <button class="menu-btn" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false"><i></i><i></i></button>
-  </div>
-</header>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="AmirStudio — صفحه اصلی">
+      <img src="assets/amir-studio-logo.png" alt="">
+      <span class="brand-word">AMIR<span>STUDIO</span></span>
+    </a>
+    <div class="header-right">
+      <span class="header-note">INDEPENDENT DIGITAL STUDIO</span>
+      <button class="menu-btn" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false" aria-controls="menuOverlay">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-<div class="backdrop" id="backdrop"></div>
-<nav class="menu-overlay" id="menuOverlay" aria-hidden="true">
-  <button class="close-menu" id="closeMenu" aria-label="بستن">×</button>
-  <div class="menu-inner">
-    <div class="menu-head"><span>AMIR STUDIO</span><small>MENU</small></div>
-    <a href="#home">خانه</a>
-    <a href="#works">نمونه‌کارها</a>
-    <a href="#about">درباره</a>
-    <a href="#services">خدمات</a>
-    <a href="#contact">تماس و پشتیبانی</a>
-  </div>
-</nav>
+  <div class="backdrop" id="backdrop"></div>
+  <nav class="menu-overlay" id="menuOverlay" aria-hidden="true" inert>
+    <button class="close-menu" id="closeMenu" aria-label="بستن منو">×</button>
+    <div class="menu-inner">
+      <div class="menu-head"><span>AMIR STUDIO</span><span>INDEX / 2026</span></div>
+      <a href="#home"><small>01</small>خانه<span>↗</span></a>
+      <a href="#works"><small>02</small>نمونه‌کارها<span>↗</span></a>
+      <a href="#studio"><small>03</small>استودیو<span>↗</span></a>
+      <a href="#services"><small>04</small>خدمات<span>↗</span></a>
+      <a href="#contact"><small>05</small>شروع همکاری<span>↗</span></a>
+    </div>
+    <div class="menu-foot"><span>DESIGN · BUILD · ELEVATE</span><span>© AMIRSTUDIO</span></div>
+  </nav>
 
-<aside class="settings-panel" id="settingsPanel" aria-hidden="true">
-  <div class="settings-head"><span>تنظیمات</span><button id="closeSettings" aria-label="بستن">×</button></div>
-  <div class="setting-row"><span>زبان</span><div class="language-buttons"><button class="active" data-lang="fa">فارسی</button><button data-lang="en">English</button></div></div>
-</aside>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> استودیوی مستقل طراحی و توسعه دیجیتال</div>
+          <h1>ایده‌های خوب،<br>شایسته‌ی <em>اجرایی بهترند.</em></h1>
+          <p class="hero-description">از اولین ایده تا آخرین جزئیات؛ وب‌سایت‌هایی طراحی می‌کنیم که هویت دارند، درست کار می‌کنند و در ذهن می‌مانند.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#works">دیدن پروژه‌ها <span>↗</span></a>
+            <a class="text-link" href="#contact">درباره‌ی پروژه‌ات صحبت کنیم <span>←</span></a>
+          </div>
+          <div class="hero-footnote"><span>استراتژی / طراحی / توسعه</span><span class="mono">01 — 05</span></div>
+        </div>
+        <div class="hero-art" aria-label="ترکیب‌بندی گرافیکی اختصاصی AmirStudio">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-cross cross-one"></div><div class="art-cross cross-two"></div>
+          <div class="art-index mono">AS—001</div>
+          <div class="art-monogram">A<span>S</span></div>
+          <div class="art-ring"></div>
+          <div class="art-caption"><span>CRAFTED WITH INTENT</span><span>EST. 2026</span></div>
+          <div class="art-side-label mono">DIGITAL / DESIGN / DEVELOPMENT</div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span>برای برندهایی که می‌خواهند جدی دیده شوند.</span><a href="#intro" aria-label="رفتن به بخش معرفی">پایین بروید <span>↓</span></a></div>
+    </section>
 
-<main>
-<section class="hero" id="home">
-  <div class="hero-orbit"></div>
-  <div class="hero-logo"><img src="assets/amir-studio-logo.png" alt="AmirStudio"><span>AMIR<span>STUDIO</span></span></div>
-  <div class="hero-copy">
-    <p class="kicker">یک استودیو، یک نگاه مشخص</p>
-    <h1>ایده‌ها را به <em>تجربه</em> تبدیل می‌کنیم.</h1>
-    <p class="hero-sub">طراحی و توسعه‌ی تجربه‌های دیجیتال؛ آرام، دقیق و مرحله‌به‌مرحله.</p>
-    <div class="hero-line"></div>
-    <div class="hero-links"><a href="#works">مشاهده‌ی پروژه‌ها <b>↗</b></a><a href="#contact">شروع یک گفت‌وگو <b>↗</b></a></div>
-  </div>
-  <div class="scroll-note">SCROLL TO EXPLORE</div>
-</section>
+    <section class="intro section" id="intro">
+      <div class="section-label"><span class="mono">01 /</span> رویکرد ما</div>
+      <div class="intro-grid">
+        <h2>کمتر، اما<br><em>با فکر بیشتر.</em></h2>
+        <div class="intro-copy"><p class="large-copy">طراحی خوب فقط زیبا نیست؛ باید هدف داشته باشد، واضح باشد و تجربه‌ای روان بسازد.</p><p>در AmirStudio هر تصمیم از یک سؤال ساده شروع می‌شود: آیا این جزئیات تجربه را بهتر می‌کند؟ اگر نه، جایی در محصول ندارد.</p><a class="underlined-link" href="#studio">با نگاه ما آشنا شوید <span>↗</span></a></div>
+      </div>
+    </section>
 
-<section class="intro section">
- <div class="section-label">01 / APPROACH</div>
- <div class="intro-grid"><h2>از ایده تا اجرا.</h2><p>هر پروژه از یک مسئله‌ی واقعی شروع می‌شود. آن را ساده می‌کنیم، ساختار می‌دهیم و به یک تجربه‌ی دیجیتال قابل استفاده تبدیل می‌کنیم.</p></div>
-</section>
+    <section class="works section" id="works">
+      <div class="section-heading">
+        <div><div class="section-label"><span class="mono">02 /</span> پروژه‌های منتخب</div><h2>کارهایی که حرف می‌زنند.</h2></div>
+        <p>هر پروژه یک شخصیت دارد.<br>این‌ها بخشی از مسیر ما هستند.</p>
+      </div>
+      <div class="work-grid">
+        <a class="work-card" href="https://Amir-Studio.github.io/Swiss-Gallery/" target="_blank" rel="noopener noreferrer">
+          <div class="work-art swiss-art"><span class="project-no mono">PROJECT / 001</span><div class="swiss-mark">S<span>G</span></div><div class="swiss-lines"></div><span class="art-bottom mono">SWISS GALLERY</span><span class="open-project">↗</span></div>
+          <div class="work-meta"><div><h3>Swiss Gallery</h3><p>تجربه‌ی دیجیتال گالری</p></div><span class="work-type">WEB EXPERIENCE</span></div>
+        </a>
+        <a class="work-card" href="https://Amir-Studio.github.io/Luxury-Caffee/" target="_blank" rel="noopener noreferrer">
+          <div class="work-art coffee-art"><span class="project-no mono">PROJECT / 002</span><div class="coffee-sun"></div><div class="coffee-word">LUXURY<br><i>CAFFEE</i></div><span class="art-bottom mono">A MOMENT, REFINED</span><span class="open-project">↗</span></div>
+          <div class="work-meta"><div><h3>Luxury Caffee</h3><p>هویت دیجیتال کافه</p></div><span class="work-type">BRAND EXPERIENCE</span></div>
+        </a>
+        <a class="work-card" href="https://Amir-Studio.github.io/DelarisCake/" target="_blank" rel="noopener noreferrer">
+          <div class="work-art cake-art"><span class="project-no mono">PROJECT / 003</span><div class="cake-frame"><span>DE LARIS</span><i>CAKE STUDIO</i></div><span class="art-bottom mono">MADE TO BE REMEMBERED</span><span class="open-project">↗</span></div>
+          <div class="work-meta"><div><h3>Delaris Cake</h3><p>وب‌سایت برند شیرینی و کیک</p></div><span class="work-type">WEB DESIGN</span></div>
+        </a>
+      </div>
+      <div class="works-foot"><span class="mono">SELECTED WORKS — 2026</span><span>برای هر پروژه، یک مسیر اختصاصی.</span></div>
+    </section>
 
-<section class="works section" id="works">
- <div class="section-top"><div><div class="section-label">02 / SELECTED WORKS</div><h2>چیزهایی که ساخته‌ایم.</h2></div><span class="section-index">03</span></div>
- <div class="work-list">
-  <a class="work-card" href="https://Amir-Studio.github.io/Swiss-Gallery/" target="_blank" rel="noopener"><div class="work-visual swiss"><span>SWISS<br>GALLERY</span><small>01</small></div><div class="work-meta"><span>Swiss Gallery</span><small>Web Experience ↗</small></div></a>
-  <a class="work-card" href="https://Amir-Studio.github.io/Luxury-Caffee/" target="_blank" rel="noopener"><div class="work-visual coffee"><span>LUXURY<br>CAFFEE</span><small>02</small></div><div class="work-meta"><span>Luxury Caffee</span><small>Web Experience ↗</small></div></a>
-  <a class="work-card" href="https://Amir-Studio.github.io/DelarisCake/" target="_blank" rel="noopener"><div class="work-visual cake"><span>DELARIS<br>CAKE</span><small>03</small></div><div class="work-meta"><span>Delaris Cake</span><small>Web Experience ↗</small></div></a>
- </div>
-</section>
+    <section class="studio section" id="studio">
+      <div class="section-label"><span class="mono">03 /</span> درباره‌ی استودیو</div>
+      <div class="studio-main"><div class="studio-title"><span class="studio-symbol">✳</span><h2>یک نگاه روشن.<br><em>اجرایی دقیق.</em></h2></div><div class="studio-copy"><p class="large-copy">AmirStudio در نقطه‌ی تلاقی طراحی، تکنولوژی و توجه به جزئیات قرار دارد.</p><p>ما برای ساخت تجربه‌هایی کار می‌کنیم که هم ظاهر سنجیده‌ای داشته باشند و هم در استفاده‌ی واقعی قابل اتکا باشند؛ از ساختار اولیه تا آخرین ریزه‌کاری.</p></div></div>
+      <div class="principles">
+        <article><span class="principle-no mono">01</span><h3>هدف‌مندی</h3><p>هر صفحه، هر حرکت و هر انتخاب باید هدف مشخصی داشته باشد.</p></article>
+        <article><span class="principle-no mono">02</span><h3>شخصیت</h3><p>هویت بصری هر برند باید متعلق به خودش باشد، نه نسخه‌ای از دیگران.</p></article>
+        <article><span class="principle-no mono">03</span><h3>جزئیات</h3><p>کیفیت واقعی از کنار هم قرار گرفتن تصمیم‌های کوچک ساخته می‌شود.</p></article>
+      </div>
+    </section>
 
-<section class="about section" id="about">
- <div class="section-label">03 / THE STUDIO</div>
- <div class="about-grid"><h2>یک استودیو، یک نگاه.</h2><div><p class="lead">AmirStudio جایی میان طراحی، تکنولوژی و جزئیات شکل گرفته است.</p><p>ما به جای شلوغ کردن تجربه، روی چیزهایی تمرکز می‌کنیم که باید درست باشند: ساختار، تایپوگرافی، حرکت و حس.</p></div></div>
- <div class="principles"><div><span>01</span><strong>سادگی</strong><p>هر عنصر باید دلیلی برای حضور داشته باشد.</p></div><div><span>02</span><strong>شخصیت</strong><p>هر پروژه زبان بصری خودش را پیدا می‌کند.</p></div><div><span>03</span><strong>جزئیات</strong><p>کیفیت در چیزهایی ساخته می‌شود که شاید در نگاه اول دیده نشوند.</p></div></div>
-</section>
+    <section class="services section" id="services">
+      <div class="section-heading">
+        <div><div class="section-label"><span class="mono">04 /</span> توانمندی‌ها</div><h2>از فکر تا محصول.</h2></div>
+        <p>همکاری از جایی شروع می‌شود<br>که مسئله را درست بفهمیم.</p>
+      </div>
+      <div class="service-list">
+        <article class="service-item"><span class="service-no mono">01</span><div><h3>طراحی وب‌سایت</h3><p>تجربه‌ای متمایز، واکنش‌گرا و متناسب با هویت برند.</p></div><span class="service-arrow">↗</span></article>
+        <article class="service-item"><span class="service-no mono">02</span><div><h3>طراحی رابط و تجربه کاربری</h3><p>ساختار روشن، مسیرهای ساده و تعامل‌های قابل فهم.</p></div><span class="service-arrow">↗</span></article>
+        <article class="service-item"><span class="service-no mono">03</span><div><h3>توسعه‌ی فرانت‌اند</h3><p>تبدیل طراحی به محصولی سریع، سازگار و خوش‌ساخت.</p></div><span class="service-arrow">↗</span></article>
+        <article class="service-item"><span class="service-no mono">04</span><div><h3>هویت دیجیتال</h3><p>ایجاد زبان بصری منسجم برای حضور آنلاین برند.</p></div><span class="service-arrow">↗</span></article>
+      </div>
+    </section>
 
-<section class="services section" id="services">
- <div class="section-label">04 / CAPABILITIES</div>
- <div class="service-list">
-  <div class="service-item"><span>01</span><div><h3>طراحی UI / UX</h3><p>رابط‌هایی ساده، دقیق و متناسب با هویت هر پروژه.</p></div></div>
-  <div class="service-item"><span>02</span><div><h3>طراحی وب</h3><p>سایت‌های واکنش‌گرا با تمرکز روی تجربه و جزئیات.</p></div></div>
-  <div class="service-item"><span>03</span><div><h3>توسعه فرانت‌اند</h3><p>تبدیل طراحی به تجربه‌ای سریع، تمیز و زنده.</p></div></div>
-  <div class="service-item"><span>04</span><div><h3>هویت دیجیتال</h3><p>ساخت یک زبان بصری منسجم برای حضور آنلاین برند.</p></div></div>
- </div>
-</section>
+    <section class="process section" id="process">
+      <div class="section-label"><span class="mono">05 /</span> مسیر همکاری</div>
+      <div class="process-grid"><h2>روشن از<br><em>روز اول.</em></h2><div class="process-steps">
+        <div><span class="mono">01</span><section><h3>گفت‌وگو و شناخت</h3><p>هدف، مخاطب و نیازهای واقعی پروژه را مشخص می‌کنیم.</p></section></div>
+        <div><span class="mono">02</span><section><h3>طراحی و ساخت</h3><p>ساختار و ظاهر را شکل می‌دهیم و مرحله‌به‌مرحله اجرا می‌کنیم.</p></section></div>
+        <div><span class="mono">03</span><section><h3>بازبینی و تحویل</h3><p>جزئیات را بررسی می‌کنیم تا تجربه‌ای منسجم آماده‌ی انتشار باشد.</p></section></div>
+      </div></div>
+    </section>
 
-<section class="contact section" id="contact">
- <div class="section-label">05 / CONTACT</div>
- <div class="contact-grid"><div><h2>بیایید چیزی<br><em>درست</em> بسازیم.</h2><p>برای شروع یک پروژه یا دریافت مشاوره، راه ارتباطی مورد علاقه‌تان را انتخاب کنید.</p></div>
- <div class="contact-card"><div class="contact-label-row"><span>آیدی سروش پلاس:</span><div class="phone-row"><a class="phone" href="https://splus.ir/Matin00AD" target="_blank" rel="noopener">@Matin00AD</a><div class="socials">
-  <a class="social" href="https://rubika.ir/SuperGenius" target="_blank" rel="noopener" aria-label="Rubika"><span class="rubika-icon">R</span></a>
-  <a class="social" href="https://splus.ir/Matin00AD" target="_blank" rel="noopener" aria-label="Splus"><span class="splus-icon">S</span></a>
- </div></div></div><a class="email" href="mailto:amir0website@gmail.com">Gmail: amir0website@gmail.com</a></div></div>
-</section>
-</main>
-<footer class="footer"><div>AMIR<span>STUDIO</span></div><span>Design · Build · Elevate</span><span>© 2026</span></footer>
-<script src="script.js"></script>
+    <section class="contact section" id="contact">
+      <div class="contact-top"><div class="section-label"><span class="mono">06 /</span> شروع همکاری</div><span class="contact-stamp mono">LET’S MAKE IT MATTER</span></div>
+      <div class="contact-grid"><div><h2>ایده‌ای در ذهن داری؟<br><em>بیایید بسازیمش.</em></h2><p>برای سفارش طراحی سایت، توسعه‌ی یک ایده یا صحبت درباره‌ی پروژه‌ی بعدی، از یکی از راه‌های زیر پیام بده.</p></div>
+        <div class="contact-card">
+          <span class="contact-label">مستقیم در ارتباط باش</span>
+          <a class="contact-link" href="mailto:amir0website@gmail.com"><span class="contact-icon">↗</span><span><small>EMAIL</small>amir0website@gmail.com</span></a>
+          <a class="contact-link" href="https://splus.ir/Matin00AD" target="_blank" rel="noopener noreferrer"><span class="contact-icon">↗</span><span><small>SOROUSH PLUS</small>@Matin00AD</span></a>
+          <a class="contact-link" href="https://rubika.ir/SuperGenius" target="_blank" rel="noopener noreferrer"><span class="contact-icon">↗</span><span><small>RUBIKA</small>@SuperGenius</span></a>
+          <div class="contact-note"><span class="status-dot"></span> برای شروع، یک پیام کوتاه کافی است.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="footer-brand" href="#home">AMIR<span>STUDIO</span></a><span class="footer-tagline">Design. Build. Elevate.</span><a class="back-top" href="#home">بازگشت به بالا ↑</a><span class="footer-copy">© <span id="year">2026</span> AMIRSTUDIO</span></footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
-<style>
-.phone-number { font-size: 1.08em; letter-spacing: 0.02em; }
-</style>

@@ -233,3 +233,28 @@ h1 em,h2 em{font-style:normal;color:var(--gold-light)}
  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
  .reveal{opacity:1;transform:none}
 }
+
+/* ===== Additional portfolio artwork ===== */
+.gonzo-art{background:radial-gradient(circle at 50% 45%,#2e2450 0,#15121e 38%,#090909 78%)}
+.gonzo-art:before{content:"";position:absolute;width:64%;aspect-ratio:1;border:1px solid #9b8ad555;transform:rotate(45deg)}
+.gonzo-mark{position:absolute;top:47%;left:50%;transform:translate(-50%,-50%);font:300 clamp(75px,10vw,125px)/1 var(--serif);letter-spacing:-.13em;color:#e8e2f1;direction:ltr}
+.gonzo-mark span{color:#a995e9;font-size:.5em;vertical-align:middle;margin:0 .12em}
+.moon-art{background:radial-gradient(circle at 50% 45%,#172c4b 0,#0c1422 46%,#090b10 80%)}
+.moon-art:before,.moon-art:after{content:"";position:absolute;width:75%;aspect-ratio:1;border:1px solid #7aaeff36;border-radius:50%;transform:rotate(-25deg)}
+.moon-art:after{width:58%;border-color:#c85c7036;transform:rotate(25deg)}
+.moon-mark{font-size:clamp(100px,13vw,155px);color:#d5e6ff;text-shadow:0 0 55px #7aaeff4d;z-index:1}
+.cakeino-art{background:radial-gradient(ellipse at 50% 45%,#754f43 0,#38251f 48%,#1b1210 100%)}
+.cakeino-art:before{content:"";position:absolute;width:66%;height:75%;border:1px solid #e7bca84f;border-radius:50%;transform:rotate(24deg)}
+.cakeino-mark{position:relative;z-index:1;font-size:clamp(28px,4vw,45px);font-weight:500;color:#fff0e2;text-align:center}
+.cakeino-mark span{color:#e7bca8}
+.cakeino-mark small{display:block;font:8px var(--mono);letter-spacing:.16em;color:#d5b4a3;margin-top:10px;direction:ltr}
+.gold-art{background:radial-gradient(circle at 50% 45%,#332a18 0,#17130d 46%,#090909 82%)}
+.gold-art:before,.gold-art:after{content:"";position:absolute;width:66%;aspect-ratio:1;border:1px solid #c6a66b4d;border-radius:50%}
+.gold-art:after{width:48%;border-color:#c6a66b26}
+.gold-mark{position:relative;z-index:1;font:300 clamp(44px,7vw,78px)/.9 var(--serif);letter-spacing:.12em;text-align:center;color:#f0e2c1;direction:ltr}
+.gold-mark i{font-style:normal;color:var(--gold);font-size:1.1em}
+.asra-art{background:radial-gradient(circle at 50% 45%,#3d2c50 0,#21182e 48%,#100e1b 84%)}
+.asra-art:before{content:"";position:absolute;width:67%;aspect-ratio:1;border:1px solid #e7a9c447;border-radius:50%;box-shadow:0 0 70px #e7a9c414}
+.asra-mark{position:relative;z-index:1;font-size:clamp(75px,10vw,120px);color:#e8ce9b;line-height:1}
+.asra-mark span{display:block;font-size:.55em;color:#e7a9c4;text-align:center;margin-top:-8px}
+@media(max-width:760px){.gonzo-mark{font-size:130px}.moon-mark{font-size:130px}.gold-mark{font-size:70px}.cakeino-mark{font-size:42px}.asra-mark{font-size:100px}}

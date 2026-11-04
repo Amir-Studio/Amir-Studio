@@ -36,7 +36,10 @@
       if(!response.ok)throw new Error("rate unavailable");
       const payload=await response.json();
       const node=findUsdNode(payload);
+      const publishedAt=Date.parse(payload.meta?.updated_at??payload.meta?.published_at??"");
+      if(payload.meta?.stale===true||(Number.isFinite(publishedAt)&&Date.now()-publishedAt>2*60*60*1000)) throw new Error("stale rate");
       const raw=node&&(node.price??node.value??node.close??node.p??node.rate);
+      if(node?.stale===true) throw new Error("stale rate");
       const rate=Number(String(raw??"").replace(/,/g,""));
       if(!Number.isFinite(rate)||rate<=0)throw new Error("invalid rate");
       const toman=rate>1000000?rate/10:rate;

@@ -364,3 +364,11 @@ h1 em,h2 em{font-style:normal;color:var(--gold-light)}
  .contact-phone-link b{font-size:clamp(25px,7vw,32px)}
 }
 @media(prefers-reduced-motion:reduce){.showcase-card,.showcase-card:before,.showcase-cta b{transition:none}}
+
+/* Élan Clinic — portfolio case card */
+.showcase-clinic{background:#22291f;color:#f2eee5}
+.showcase-clinic:before{background:radial-gradient(ellipse at 55% 30%,#69785e 0,#354331 45%,#171d16 100%)}
+.clinic-wordmark{font-family:"Manrope","Vazirmatn",sans-serif;font-weight:400;letter-spacing:.16em}
+.clinic-wordmark span{font-size:.38em;letter-spacing:.45em;color:#d7c39d}
+.brand-word{letter-spacing:.08em}
+.footer-brand{letter-spacing:.08em}

@@ -1,64 +1,35 @@
 (() => {
   const menuButton = document.getElementById("menuToggle");
-  const menu = document.getElementById("menuOverlay");
-  const backdrop = document.getElementById("backdrop");
-  const closeButton = document.getElementById("closeMenu");
+  const mobileNav = document.getElementById("mobileNav");
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  if (menuButton && menu && backdrop && closeButton) {
-    let lastFocused = null;
-
+  if (menuButton && mobileNav) {
     const setMenu = (open) => {
-      menu.classList.toggle("open", open);
-      backdrop.classList.toggle("active", open);
-      menuButton.classList.toggle("active", open);
       menuButton.setAttribute("aria-expanded", String(open));
-      menu.setAttribute("aria-hidden", String(!open));
-      menu.inert = !open;
-      document.body.classList.toggle("lock", open);
-
-      if (open) {
-        lastFocused = document.activeElement;
-        closeButton.focus({ preventScroll: true });
-      } else if (lastFocused && typeof lastFocused.focus === "function") {
-        lastFocused.focus({ preventScroll: true });
-      }
+      menuButton.setAttribute("aria-label", open ? "بستن منو" : "باز کردن منو");
+      mobileNav.classList.toggle("open", open);
+      mobileNav.inert = !open;
+      document.body.classList.toggle("menu-open", open);
     };
-
     menuButton.addEventListener("click", () => {
       setMenu(menuButton.getAttribute("aria-expanded") !== "true");
     });
-    closeButton.addEventListener("click", () => setMenu(false));
-    backdrop.addEventListener("click", () => setMenu(false));
-    menu.querySelectorAll('a[href^="#"]').forEach((link) => {
+    mobileNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setMenu(false));
     });
-
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && menu.classList.contains("open")) {
+      if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
         setMenu(false);
+        menuButton.focus();
       }
-      if (event.key === "Tab" && menu.classList.contains("open")) {
-        const focusable = [...menu.querySelectorAll('a[href], button:not([disabled])')];
-        if (!focusable.length) return;
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      }
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760) setMenu(false);
     });
   }
 
-  const revealTargets = document.querySelectorAll(
-    ".section, .work-card, .service-item, .principles article, .process-steps > div, .contact-card"
-  );
-
+  const targets = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -67,13 +38,9 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
-
-    revealTargets.forEach((element) => {
-      element.classList.add("reveal");
-      observer.observe(element);
-    });
+    }, { threshold: 0.12, rootMargin: "0px 0px -25px 0px" });
+    targets.forEach((target) => observer.observe(target));
   } else {
-    revealTargets.forEach((element) => element.classList.add("visible"));
+    targets.forEach((target) => target.classList.add("visible"));
   }
 })();

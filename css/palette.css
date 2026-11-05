@@ -38,3 +38,36 @@ body{background:linear-gradient(145deg,#ded7ca,#d4ccbe 48%,#d9d1c4)}
 .product-line{border-color:rgba(238,232,220,.17)}
 .product-line h3{color:#eee8dc}.product-line p{color:#c9c1b4}
 .product-count{color:#d0b98f}.product-action{color:#e5d9c7}
+
+/* Journal combines soft paper cards, dark artwork and fine gold details. */
+.journal-grid{gap:18px}
+.journal-card{background:rgba(238,232,220,.78);border:1px solid rgba(48,44,36,.12);padding:16px 16px 20px;transition:transform .3s,border-color .3s,background .3s}
+.journal-card:hover{transform:translateY(-4px);background:rgba(244,239,230,.94);border-color:rgba(152,123,80,.4)}
+.journal-no,.journal-meta{color:#987b50}.journal-card h3{color:#302e28}
+.journal-card>p{color:#625d53}.journal-arrow{color:#5d5549}.journal-arrow b{color:#987b50}
+/* Contact pairs a charcoal information card with a readable cream form. */
+.contact{gap:clamp(24px,6vw,90px);align-items:stretch}
+.contact-intro{background:linear-gradient(145deg,#302e28,#3a362e);color:#eee8dc;padding:32px clamp(22px,3vw,42px);border:1px solid rgba(182,154,109,.28)}
+.contact-intro h2{color:#eee8dc}.contact-intro h2 em{color:#d2b98e}
+.contact-intro .eyebrow{color:#d2b98e}.contact-intro>p{color:#d0c8bb}
+.contact-links,.contact-links a{border-color:rgba(238,232,220,.18)}
+.contact-links small,.contact-links b{color:#d2b98e}.contact-links span{color:#eee8dc}
+.project-form{background:rgba(238,232,220,.82);border:1px solid rgba(48,44,36,.12);padding:30px clamp(20px,3vw,38px);align-content:start}
+.project-form label{color:#302e28}
+.project-form input,.project-form select,.project-form textarea{color:#302e28;border-color:rgba(48,44,36,.28)}
+.project-form input::placeholder,.project-form textarea::placeholder{color:#81796b}
+.project-form select{color:#514b40}.project-form select option{background:#eee8dc;color:#292720}
+.project-form .optional,.project-form .form-note{color:#81796b}
+.form-submit{background:#b69a6d;border-color:#b69a6d;color:#292720}
+.form-submit:hover{background:#c9ae82}
+.site-footer{background:rgba(48,46,40,.96);border-color:rgba(238,232,220,.16);color:#eee8dc}
+.site-footer>span,.site-footer>a:not(.footer-brand){color:#c9c1b4}
+@media(max-width:760px){
+ .hero-visual-shade{background:linear-gradient(90deg,rgba(41,39,32,.84),rgba(41,39,32,.28)),linear-gradient(0deg,#292720,rgba(41,39,32,.1) 62%)}
+ .chapter-info{padding:15px 14px 14px}
+ .studio-story{gap:16px}.studio-quote,.studio-description{padding:22px 19px}
+ .capability-list article{padding:16px 14px}.capability-list article:hover{padding-inline:16px}
+ .product-lines{padding-inline:15px}.journal-grid{gap:16px}
+ .journal-card{padding:13px 13px 17px}.contact-intro,.project-form{padding:23px 19px}
+}
+@media(prefers-reduced-motion:reduce){.hero-visual img{transform:none}}

@@ -116,3 +116,73 @@ body{
  .journal-card{padding:13px 13px 17px}.contact-intro,.project-form{padding:23px 19px}
 }
 @media(prefers-reduced-motion:reduce){.hero-visual img{transform:none}}
+
+
+/* Cohesive first impression: a refined circular identity and a soft transition into the page. */
+.brand img,.footer-brand img{
+ width:48px;height:48px;max-height:none;aspect-ratio:1/1;object-fit:contain;
+ object-position:center;border-radius:50%;padding:4px;
+ background:rgba(238,232,220,.08);border:1px solid rgba(193,167,122,.48);
+ box-shadow:0 4px 18px rgba(24,22,18,.16)
+}
+.footer-brand img{width:42px;height:42px}
+.site-header .brand{display:flex;align-items:center}
+.hero{isolation:isolate}
+.hero::after{
+ content:"";position:absolute;z-index:1;inset:auto 0 0;height:125px;pointer-events:none;
+ background:linear-gradient(180deg,rgba(215,208,195,0),#d7d0c3 100%)
+}
+.hero-meta{color:rgba(41,39,32,.72);border-color:rgba(48,44,36,.25)}
+.hero-meta a{color:#38352e}.hero-meta b{color:#987b50}
+.hero-index{z-index:2}
+.hero-visual-shade{
+ background:linear-gradient(90deg,#292720 0%,rgba(41,39,32,.88) 35%,rgba(41,39,32,.08) 82%),
+ linear-gradient(0deg,rgba(215,208,195,.92) 0%,rgba(215,208,195,0) 28%,rgba(41,39,32,.18) 100%)
+}
+.contact{display:block;text-align:initial}
+.contact-intro{max-width:900px;margin:0 auto}
+.contact-intro>p{max-width:620px}
+.contact-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 26px}
+.contact-links a{grid-template-columns:1fr 18px;grid-template-rows:auto auto;gap:4px 8px;padding:17px 0}
+.contact-links small{grid-column:1/-1}
+.contact-links span{grid-column:1;grid-row:2}
+.contact-links b{grid-column:2;grid-row:2}
+.splash-screen{
+ position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;
+ align-items:center;justify-content:center;gap:15px;overflow:hidden;
+ color:#eee8dc;background:
+ radial-gradient(circle at 50% 44%,rgba(193,167,122,.13),transparent 26%),
+ linear-gradient(145deg,#24231f,#171612 72%,#292720);
+ opacity:1;visibility:visible;transition:opacity .85s ease,visibility .85s ease
+}
+.splash-screen::before,.splash-screen::after{
+ content:"";position:absolute;border:1px solid rgba(193,167,122,.13);border-radius:50%;
+ width:min(76vw,470px);aspect-ratio:1;pointer-events:none
+}
+.splash-screen::after{width:min(92vw,570px);border-color:rgba(238,232,220,.055)}
+.splash-screen.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.splash-mark{
+ position:relative;z-index:1;width:104px;height:104px;border-radius:50%;display:grid;place-items:center;
+ padding:10px;background:linear-gradient(145deg,rgba(238,232,220,.14),rgba(238,232,220,.025));
+ border:1px solid rgba(193,167,122,.72);box-shadow:0 0 0 8px rgba(193,167,122,.045),0 18px 65px rgba(0,0,0,.3);
+ animation:splashMarkIn 1.05s cubic-bezier(.2,.7,.2,1) both
+}
+.splash-mark img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+.splash-wordmark{position:relative;z-index:1;font:500 15px var(--en);letter-spacing:.34em;color:#eee8dc}
+.splash-wordmark span{color:#c1a77a}
+.splash-caption{position:relative;z-index:1;font:7px var(--mono);letter-spacing:.22em;color:rgba(238,232,220,.52)}
+.splash-loader{position:relative;z-index:1;width:58px;height:1px;margin-top:9px;overflow:hidden;background:rgba(193,167,122,.2)}
+.splash-loader::after{content:"";display:block;width:35%;height:100%;background:#c1a77a;animation:splashLoad 1.3s ease-in-out infinite}
+@keyframes splashMarkIn{from{opacity:0;transform:translateY(12px) scale(.88)}to{opacity:1;transform:none}}
+@keyframes splashLoad{from{transform:translateX(180%)}to{transform:translateX(-300%)}}
+@media(max-width:760px){
+ .brand img{width:43px;height:43px}.footer-brand img{width:39px;height:39px}
+ .contact-links{grid-template-columns:1fr;gap:0}
+ .contact-links a{grid-template-columns:70px minmax(0,1fr) 18px;grid-template-rows:1fr}
+ .contact-links small,.contact-links span,.contact-links b{grid-column:auto;grid-row:auto}
+ .hero::after{height:95px}
+}
+@media(prefers-reduced-motion:reduce){
+ .splash-screen,.splash-mark{animation:none;transition:none}
+ .splash-loader::after{animation:none}
+}

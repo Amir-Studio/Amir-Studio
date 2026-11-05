@@ -1,2 +1,13 @@
-/* Updated palette */
-:root{--bg:#d8d0c2;--ink:#292720;--paper:#eee8dc;--muted:#625d53;--gold:#987b50}
+/* Connected palette: shared warm canvas, contained dark and cream surfaces */
+:root{--bg:#d8d0c2;--bg-2:#cfc6b7;--paper:#eee8dc;--ink:#292720;--muted:#625d53;--dim:#81796b;--line:rgba(48,44,36,.18);--gold:#987b50;--gold-light:#b69a6d}
+html,body{background:#d8d0c2;color:#292720}
+body{background:linear-gradient(145deg,#ded7ca,#d4ccbe 48%,#d9d1c4)}
+.site-header{border-color:rgba(238,232,220,.24)}
+.site-header .main-nav a,.site-header .header-contact{color:#e5ddcf}
+.site-header.is-scrolled{background:rgba(43,41,35,.92);border-color:rgba(224,211,188,.18)}
+.site-header.is-scrolled .main-nav a,.site-header.is-scrolled .header-contact{color:#e5ddcf}
+.hero{background:#292720;color:#eee8dc}
+.hero-visual img{filter:grayscale(.18) saturate(.72) brightness(.78)}
+.hero-visual-shade{background:linear-gradient(90deg,#292720,rgba(41,39,32,.9) 38%,rgba(41,39,32,.06) 80%)}
+.work,.studio,.capabilities,.products,.journal,.contact{background:transparent;color:#292720}
+.section-heading h2{color:#292720}.section-heading h2 em{color:#987b50}.section-heading>p{color:#625d53}.eyebrow{color:#987b50}

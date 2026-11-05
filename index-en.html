@@ -22,11 +22,11 @@
 <link rel="stylesheet" href="css/journal.css?v=2">
 <link rel="stylesheet" href="css/contact.css?v=3"><link rel="stylesheet" href="css/products.css?v=2">
 <link rel="stylesheet" href="css/palette.css?v=4">
-<link rel="stylesheet" href="css/art-direction.css?v=6">
+<link rel="stylesheet" href="css/art-direction.css?v=7">
 </head>
 <body class="has-splash">
 <div class="splash-screen" id="siteSplash" aria-label="AmirStudio">
-  <div class="splash-mark"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></div>
+  <div class="splash-content"><div class="splash-mark"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></div><div class="splash-name">AmirStudio<span>®</span></div><span class="splash-rule" aria-hidden="true"></span></div>
 </div>
 
 <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
@@ -36,7 +36,7 @@
     <a href="#work">Work</a><a href="#studio">Studio</a><a href="#capabilities">Capabilities</a><a href="#products">Digital products</a><a href="#journal">Journal</a>
   </nav>
   <a class="header-contact" href="#contact">Start a conversation <span>↗</span></a>
-  <a class="language-switch" href="index.html" aria-label="Switch language to Persian"><span class="language-symbol" aria-hidden="true">◎</span><span class="language-label">Language</span><b>FA</b><span class="language-arrow" aria-hidden="true">↗</span></a>
+  <details class="language-menu"><summary><span class="language-symbol" aria-hidden="true">◎</span><span>Language</span><span class="language-chevron" aria-hidden="true">⌄</span></summary><div class="language-options"><a href="index.html" lang="fa">فارسی</a><a href="index-en.html" lang="en" aria-current="page">English <span>✓</span></a></div></details>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><i></i><i></i></button>
 </header>
 <nav class="mobile-nav" id="mobileNav" aria-label="Main menu" aria-hidden="true" inert>
@@ -70,7 +70,7 @@
     <span class="art-caption">FORM STUDY — 001</span>
   </div>
   <div class="hero-content">
-    <div class="hero-brand-lockup" aria-label="AmirStudio"><img src="assets/amir-studio-logo.png" alt=""><span>AMIRSTUDIO</span></div>
+    
     <span class="hero-kicker">INDEPENDENT DIGITAL STUDIO · EST. 2026</span>
     <h1 id="heroTitle">Independent<br><em>by design.</em></h1>
     <p>Digital experiences, shaped with intention.</p>
@@ -140,9 +140,9 @@
 <section class="journal section-shell" id="journal">
   <div class="section-heading"><div><span class="eyebrow">05 / JOURNAL</span><h2>Notes on <em>design.</em></h2></div><p>Ideas, observations and principles behind design decisions.</p></div>
   <div class="journal-grid">
-    <a class="journal-card" href="journal/less-but-better.html"><span class="journal-no">01 / PRINCIPLES</span><div class="journal-art art-one"><i></i><b></b></div><span class="journal-meta">DESIGN THINKING · 4 MIN READ</span><h3>Minimalism is not about removing; it is about choosing.</h3><p>How can a page feel calmer and more intentional without becoming empty?</p><span class="journal-arrow">READ NOTE <b>↗</b></span></a>
-    <a class="journal-card" href="journal/light-and-hierarchy.html"><span class="journal-no">02 / VISUAL LANGUAGE</span><div class="journal-art art-two"><i></i><b></b></div><span class="journal-meta">VISUAL DESIGN · 3 MIN READ</span><h3>Light, contrast and visual hierarchy.</h3><p>Why should attention be guided instead of competing with everything at once?</p><span class="journal-arrow">READ NOTE <b>↗</b></span></a>
-    <a class="journal-card" href="journal/performance-is-design.html"><span class="journal-no">03 / DIGITAL CRAFT</span><div class="journal-art art-three"><i></i><b></b></div><span class="journal-meta">DEVELOPMENT · 5 MIN READ</span><h3>Performance is part of design.</h3><p>A beautiful experience that loads slowly and feels heavy is not yet a good experience.</p><span class="journal-arrow">READ NOTE <b>↗</b></span></a>
+    <a class="journal-card" href="journal/less-but-better.html"><span class="journal-no">01 / PRINCIPLES</span><img class="journal-photo" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1100&q=85" alt="A calm, carefully arranged creative studio workspace" loading="lazy"><span class="journal-meta">DESIGN THINKING · 4 MIN READ</span><h3>Minimalism is not about removing; it is about choosing.</h3><p>How can a page feel calmer and more intentional without becoming empty?</p><span class="journal-arrow">READ NOTE <b>↗</b></span></a>
+    <a class="journal-card" href="journal/light-and-hierarchy.html"><span class="journal-no">02 / VISUAL LANGUAGE</span><img class="journal-photo" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1100&q=85" alt="A designer working at a digital workspace" loading="lazy"><span class="journal-meta">VISUAL DESIGN · 3 MIN READ</span><h3>Light, contrast and visual hierarchy.</h3><p>Why should attention be guided instead of competing with everything at once?</p><span class="journal-arrow">READ NOTE <b>↗</b></span></a>
+    <a class="journal-card" href="journal/performance-is-design.html"><span class="journal-no">03 / DIGITAL CRAFT</span><img class="journal-photo" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85" alt="Modern architectural workspace with natural light" loading="lazy"><span class="journal-meta">DEVELOPMENT · 5 MIN READ</span><h3>Performance is part of design.</h3><p>A beautiful experience that loads slowly and feels heavy is not yet a good experience.</p><span class="journal-arrow">READ NOTE <b>↗</b></span></a>
   </div>
 </section>
 
@@ -160,12 +160,12 @@
 </main>
 <footer class="site-footer footer-editorial">
   <a href="#home" class="footer-brand"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></a>
-  <p>Independent digital studio. Design with intention.</p>
+  <p>Independent digital studio.<br>Design with intention.</p>
   <nav aria-label="Footer navigation"><a href="#work">Work</a><a href="#studio">Studio</a><a href="#capabilities">Capabilities</a><a href="#contact">Contact</a><a href="faq-en.html">FAQ</a></nav>
   <span>© <b id="year">2026</b> AMIRSTUDIO</span>
 </footer>
-<script src="js/splash.js?v=3" defer></script>
+<script src="js/splash.js?v=4" defer></script>
 <script src="js/hero-motion.js?v=1" defer></script>
 <script src="js/contact-form.js?v=1" defer></script>
-<script src="js/navigation.js?v=3" defer></script><script src="js/animations.js?v=3" defer></script><script src="js/main.js?v=3" defer></script>
+<script src="js/navigation.js?v=3" defer></script><script src="js/animations.js?v=3" defer></script><script src="js/main.js?v=4" defer></script>
 </body></html>

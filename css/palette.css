@@ -186,3 +186,5 @@ body{
  .splash-screen,.splash-mark{animation:none;transition:none}
  .splash-loader::after{animation:none}
 }
+
+@media(max-width:760px){.nav-toggle{border-color:rgba(238,232,220,.35)}.nav-toggle i{background:#eee8dc}}

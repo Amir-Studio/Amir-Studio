@@ -303,3 +303,146 @@ html[dir="rtl"] .project-caption h3{direction:ltr;unicode-bidi:isolate;text-alig
 html[dir="rtl"] .mobile-nav{width:75vw;max-width:none}
 html[dir="ltr"] .mobile-nav{width:75vw;max-width:none}
 @media(max-width:760px){.mobile-nav{width:75vw;max-width:none}.hero-brand-lockup img{width:108px;height:108px}}
+
+
+/* November refinement — quieter brand mark, fluid sticky header, language dropdown and real editorial photography. */
+.site-header{
+ position:fixed;top:0;left:0;right:0;inset-block-start:0;
+ height:86px;padding-inline:clamp(22px,7vw,116px);
+ background:rgba(26,26,26,0);
+ border-bottom-color:transparent;
+ transition:height .55s cubic-bezier(.2,.7,.2,1),padding .55s cubic-bezier(.2,.7,.2,1),background .55s ease,border-color .55s ease,box-shadow .55s ease,backdrop-filter .55s ease;
+ will-change:height,background;
+}
+.site-header.is-scrolled{
+ position:fixed;height:68px;
+ padding-inline:clamp(22px,6vw,100px);
+ background:rgba(31,30,27,.88);
+ border-bottom:1px solid rgba(220,207,181,.16);
+ box-shadow:0 8px 28px rgba(20,18,14,.08);
+ backdrop-filter:blur(18px) saturate(125%);
+ -webkit-backdrop-filter:blur(18px) saturate(125%);
+}
+.site-header .brand{width:46px;height:46px;transition:width .5s,height .5s,opacity .4s}
+.site-header .brand img{
+ width:42px;height:42px;max-height:none;padding:0;border:0;border-radius:50%;
+ object-fit:contain;background:transparent;box-shadow:none;transform:scale(.88);
+ transition:width .5s,height .5s,transform .5s;
+}
+.site-header.is-scrolled .brand{width:40px;height:40px}
+.site-header.is-scrolled .brand img{width:36px;height:36px;transform:scale(.88)}
+@media(max-width:760px){
+ .site-header{height:74px;padding-inline:20px}
+ .site-header.is-scrolled{height:62px;padding-inline:20px}
+ .site-header .brand{width:43px;height:43px}
+ .site-header .brand img{width:39px;height:39px}
+ .site-header.is-scrolled .brand{width:38px;height:38px}
+ .site-header.is-scrolled .brand img{width:34px;height:34px}
+}
+
+/* Language is a compact disclosure, not a hard-to-read external link. */
+.language-menu{position:relative;order:1;margin-left:auto;margin-right:clamp(18px,3vw,42px);color:#fdfbf7;font:10px var(--fa);z-index:3}
+.language-menu summary{
+ list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+ min-height:42px;padding:0 14px;border:1px solid rgba(211,193,158,.48);
+ border-radius:3px;background:rgba(255,255,255,.075);
+ box-shadow:inset 0 1px rgba(255,255,255,.08);
+ transition:background .25s,border-color .25s;
+}
+.language-menu summary::-webkit-details-marker{display:none}
+.language-menu summary:hover,.language-menu[open] summary{background:rgba(255,255,255,.13);border-color:rgba(211,193,158,.78)}
+.language-symbol{font:15px var(--en);color:#c9b995}
+.language-chevron{font:14px var(--en);color:#c9b995;transition:transform .25s}
+.language-menu[open] .language-chevron{transform:rotate(180deg)}
+.language-options{
+ position:absolute;top:calc(100% + 10px);inset-inline-end:0;min-width:150px;
+ padding:7px;background:rgba(35,34,30,.96);border:1px solid rgba(211,193,158,.3);
+ box-shadow:0 14px 35px rgba(0,0,0,.2);backdrop-filter:blur(16px);
+ animation:languageDrop .22s ease both;
+}
+.language-options a{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:11px 12px;color:#eee8dc;font:11px var(--fa);transition:background .2s,color .2s}
+.language-options a:hover,.language-options a[aria-current="page"]{background:rgba(201,185,149,.12);color:#e4d1ad}
+.language-options a span{color:#c9b995;font-size:11px}
+@keyframes languageDrop{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+html[dir="rtl"] .language-menu{direction:rtl}
+html[dir="ltr"] .language-menu{direction:ltr}
+html[dir="ltr"] .language-menu summary{font-family:var(--en)}
+html[dir="ltr"] .language-options a{font-family:var(--en)}
+@media(max-width:760px){
+ .language-menu{margin-right:12px;margin-left:auto}
+ .language-menu summary{min-height:39px;padding:0 11px;gap:8px;font-size:10px}
+ .language-options{min-width:132px}
+}
+
+/* The logo already contains its own circular gold outline: no second ring around it. */
+.splash-screen{background:radial-gradient(ellipse at 50% 43%,rgba(193,167,122,.12),transparent 32%),linear-gradient(145deg,#24231f 0%,#171612 60%,#292720 100%)}
+.splash-screen::before{display:block;width:min(68vw,430px);border-color:rgba(193,167,122,.11)}
+.splash-screen::after{display:block;width:min(84vw,530px);border-color:rgba(238,232,220,.045)}
+.splash-content{
+ position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;
+ justify-content:center;gap:19px;padding:24px;text-align:center;
+ animation:amirstudioReveal 1.25s cubic-bezier(.2,.7,.2,1) both;
+}
+.splash-mark{
+ width:clamp(146px,20vw,178px);height:auto;aspect-ratio:1;padding:0;margin:0;
+ border:0;border-radius:50%;background:transparent;box-shadow:none;overflow:hidden;
+ animation:none;
+}
+.splash-mark img{width:100%;height:100%;display:block;object-fit:contain;border-radius:50%;transform:scale(.88)}
+.splash-name{
+ font:500 clamp(23px,3.2vw,31px)/1.1 var(--en);letter-spacing:.12em;
+ color:#f2eee5;direction:ltr;text-align:center;
+}
+.splash-name span{font-size:.45em;color:#c1a77a;vertical-align:top;margin-left:3px}
+.splash-rule{display:block;width:54px;height:1px;margin-top:4px;background:linear-gradient(90deg,transparent,#c1a77a,transparent);transform-origin:center;animation:splashRule 2.2s ease-in-out infinite}
+@media(max-width:760px){.splash-mark{width:156px}.splash-content{gap:17px}.splash-name{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.splash-content,.splash-rule{animation:none}}
+
+/* Real photographic journal cards, softly rounded and editorially cropped. */
+.journal-grid{align-items:stretch}
+.journal-card{overflow:hidden;border-radius:12px}
+.journal-photo{display:block;width:100%;height:205px;margin:14px 0 20px;object-fit:cover;object-position:center;border-radius:9px;filter:saturate(.82) contrast(.98);transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .45s}
+.journal-card:hover .journal-photo{transform:scale(1.025);filter:saturate(1) contrast(1)}
+@media(max-width:760px){.journal-photo{height:205px;margin:12px 0 16px;border-radius:9px}}
+
+/* Contact invitation stays above the form, on the page canvas rather than in a boxed panel. */
+.contact{background:transparent!important}
+.contact-intro{
+ max-width:1000px;width:100%;margin-inline:auto;padding:0!important;
+ background:transparent!important;border:0!important;border-radius:0!important;
+ box-shadow:none!important;color:#292720;
+}
+.contact-intro h2{color:#292720}
+.contact-intro h2 em{color:#987b50}
+.contact-intro .eyebrow{color:#987b50}
+.contact-intro>p{color:#625d53}
+.contact-links,.contact-links a{border-color:rgba(48,44,36,.18)}
+.contact-links small,.contact-links b{color:#987b50}
+.contact-links span{color:#39352d}
+.contact-form{
+ margin-top:36px;padding:26px 0 0;border:0;border-top:1px solid rgba(48,44,36,.2);
+ background:transparent!important;box-shadow:none!important;
+}
+.contact-form label{color:#554d40}
+.contact-form input,.contact-form textarea{color:#292720;border-color:rgba(48,44,36,.28)}
+.contact-form button{background:#b69a6d;color:#292720;border:1px solid #b69a6d;transition:background .3s,transform .3s}
+.contact-form button:hover{background:#c9ae82;transform:translateY(-2px)}
+html[dir="rtl"] .contact-intro{text-align:right}
+html[dir="rtl"] .contact-intro h2,html[dir="rtl"] .contact-intro>p{text-align:right}
+html[dir="rtl"] .contact-form label{direction:rtl;text-align:right;font-family:var(--fa);letter-spacing:0}
+html[dir="rtl"] .contact-form input,html[dir="rtl"] .contact-form textarea{text-align:right;direction:rtl}
+html[dir="ltr"] .contact-form label{direction:ltr;text-align:left;font-family:var(--en)}
+html[dir="ltr"] .contact-form input,html[dir="ltr"] .contact-form textarea{text-align:left;direction:ltr}
+
+/* Footer copy is deliberately two lines and aligned to the Persian reading edge. */
+.footer-editorial p{max-width:320px;line-height:2}
+html[dir="rtl"] .footer-editorial p{direction:rtl;text-align:right;justify-self:end;font-family:var(--fa);line-height:2.15}
+html[dir="ltr"] .footer-editorial p{direction:ltr;text-align:left;justify-self:start;font-family:var(--en)}
+@media(max-width:760px){
+ html[dir="rtl"] .footer-editorial p{text-align:right;justify-self:stretch}
+ html[dir="ltr"] .footer-editorial p{text-align:left}
+}
+
+/* Persian wording for the journal is clear and familiar. */
+html[dir="rtl"] .journal .eyebrow{font-family:var(--fa);letter-spacing:0}
+html[dir="rtl"] .journal .section-heading h2,html[dir="rtl"] .journal .section-heading>p{text-align:right;direction:rtl}

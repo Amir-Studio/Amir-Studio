@@ -21,9 +21,16 @@
 <link rel="stylesheet" href="css/studio.css?v=2">
 <link rel="stylesheet" href="css/journal.css?v=2">
 <link rel="stylesheet" href="css/contact.css?v=2"><link rel="stylesheet" href="css/products.css?v=2">
-<link rel="stylesheet" href="css/palette.css?v=3">
+<link rel="stylesheet" href="css/palette.css?v=4">
 </head>
-<body>
+<body class="has-splash">
+<div class="splash-screen" id="siteSplash" aria-label="AmirStudio loading">
+  <div class="splash-orbit" aria-hidden="true"></div>
+  <div class="splash-mark"><img src="assets/amir-studio-logo.png" alt=""></div>
+  <div class="splash-wordmark">AMIR<span>STUDIO</span></div>
+  <div class="splash-caption">DESIGN · BUILD · ELEVATE</div>
+  <span class="splash-loader" aria-hidden="true"></span>
+</div>
 <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
 <header class="site-header" id="siteHeader">
   <a class="brand" href="#home" aria-label="AmirStudio home"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></a>
@@ -142,17 +149,9 @@
   <div class="contact-intro"><span class="eyebrow">05 / BEGIN A CONVERSATION</span><h2>چه چیزی را<br><em>می‌خواهید بسازید؟</em></h2><p>اگر ایده‌ای دارید یا به یک حضور دیجیتال حرفه‌ای نیاز دارید، جزئیاتش را با ما در میان بگذارید.</p>
     <div class="contact-links"><a href="mailto:projects.amirstudio@gmail.com"><small>EMAIL</small><span>projects.amirstudio@gmail.com</span><b>↗</b></a><a href="https://www.instagram.com/projects.amirstudio/" target="_blank" rel="noopener"><small>INSTAGRAM</small><span>@projects.amirstudio</span><b>↗</b></a><a href="tel:+989025131506"><small>PHONE</small><span dir="ltr">+98 902 513 1506</span><b>↗</b></a></div>
   </div>
-  <form class="project-form" id="projectForm">
-    <label>نام شما<input name="name" autocomplete="name" placeholder="نام و نام خانوادگی" required></label>
-    <label>ایمیل یا راه ارتباطی<input name="reply" autocomplete="email" placeholder="برای پاسخ‌گویی" required></label>
-    <label>چه چیزی در ذهن دارید؟<select name="type"><option value="وب‌سایت">طراحی وب‌سایت</option><option value="فروشگاه آنلاین">فروشگاه آنلاین</option><option value="محصول دیجیتال">محصول دیجیتال / اپلیکیشن</option><option value="هویت دیجیتال">هویت دیجیتال</option><option value="مشاوره">مشاوره و بررسی ایده</option><option value="سایر">موضوع دیگر</option></select></label>
-    <label>بازه‌ی سرمایه‌گذاری تقریبی <span class="optional">اختیاری</span><select name="budget"><option value="فعلاً مشخص نیست">فعلاً مشخص نیست</option><option value="کمتر از ۵ میلیون تومان">کمتر از ۵ میلیون تومان</option><option value="۵ تا ۱۵ میلیون تومان">۵ تا ۱۵ میلیون تومان</option><option value="۱۵ تا ۳۰ میلیون تومان">۱۵ تا ۳۰ میلیون تومان</option><option value="بیشتر از ۳۰ میلیون تومان">بیشتر از ۳۰ میلیون تومان</option></select></label>
-    <label class="full-field">چه تجربه‌ای را می‌خواهید خلق کنید؟<textarea name="brief" rows="4" placeholder="ایده، هدف یا هر جزئیاتی که فکر می‌کنید مهم است..." required></textarea></label>
-    <button class="form-submit" type="submit">شروع گفت‌وگو <span>↗</span></button>
-    <p class="form-note">با ارسال فرم، برنامه‌ی ایمیل شما برای ارسال درخواست باز می‌شود.</p>
-  </form>
 </section>
 </main>
 <footer class="site-footer"><a href="#home" class="footer-brand"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></a><span>DESIGN · BUILD · ELEVATE</span><span>© <b id="year">2026</b> AMIRSTUDIO</span><a href="#home">بازگشت به بالا ↑</a></footer>
+<script src="js/splash.js?v=1" defer></script>
 <script src="js/navigation.js?v=2" defer></script><script src="js/animations.js?v=2" defer></script><script src="js/main.js?v=2" defer></script>
 </body></html>

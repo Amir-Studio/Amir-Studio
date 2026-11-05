@@ -110,3 +110,11 @@ body.has-splash .hero-content{opacity:0;transform:translateY(16px)}
  .hero-art,.hero-content,.project-visual img{animation:none;transition:none}
  .project-visual:hover img{transform:none}
 }
+
+/* Desktop and mobile share the same legible, isolated navigation layer. */
+.site-header .main-nav,.site-header .header-contact{display:none}
+.site-header .nav-toggle{display:flex;align-items:center;justify-content:center;gap:5px;width:44px;height:44px;border:1px solid rgba(253,251,247,.42);border-radius:50%;background:rgba(26,26,26,.25);color:#fdfbf7;cursor:pointer}
+.site-header .nav-toggle i{display:block;width:15px;height:1px;background:#fdfbf7}
+.site-header .nav-toggle[aria-expanded="true"] i:first-child{transform:translateY(3px) rotate(45deg)}
+.site-header .nav-toggle[aria-expanded="true"] i:last-child{transform:translateY(-3px) rotate(-45deg)}
+@media(max-width:760px){.site-header .nav-toggle{width:42px;height:42px}}

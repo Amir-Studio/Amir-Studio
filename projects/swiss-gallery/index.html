@@ -3,187 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#11110f">
-<meta name="description" content="مطالعه‌ی فرایند طراحی و توسعه‌ی Swiss Gallery؛ از ایده‌ی ویترین لوکس تا ساختار مجموعه و تجربه‌ی واکنش‌گرا.">
+<meta name="theme-color" content="#10100f">
+<meta name="description" content="Swiss Gallery — طراحی یک ویترین دیجیتال برای ساعت‌های لوکس، در مطالعه‌ای از AmirStudio.">
 <title>Swiss Gallery — Case Study | AmirStudio</title>
 <link rel="icon" href="../../assets/amir-studio-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&family=Manrope:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/global.css">
-<link rel="stylesheet" href="../../css/case-study.css">
 <style>
-.case-hero{padding-bottom:0}
-.case-title{direction:ltr;text-align:right}
-.case-lead{max-width:760px;font-size:14px;line-height:2.25;color:#c8c1b5;margin-top:18px}
-.case-meta{margin-bottom:30px}
-.case-hero-note{display:flex;justify-content:space-between;gap:16px;align-items:center;border-top:1px solid var(--line);padding:14px 0;margin-top:22px;font:8px var(--mono);letter-spacing:.08em;color:var(--dim)}
-.case-body{max-width:1120px;padding-top:76px}
-.story-block{display:grid;grid-template-columns:.55fr 1.45fr;gap:8vw;padding:34px 0;border-top:1px solid var(--line)}
-.story-label{font:8px var(--mono);letter-spacing:.13em;color:var(--gold);direction:ltr}
-.story-copy h2{font-size:clamp(25px,3vw,39px);font-weight:300;line-height:1.65;margin:0 0 13px}
-.story-copy p{font-size:12px;line-height:2.45;color:var(--muted);max-width:720px;margin:0 0 12px}
-.story-copy strong{color:#e4ddcf;font-weight:500}
-.decision{padding:55px 0;border-top:1px solid var(--line)}
-.decision-head{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;margin-bottom:25px}
-.decision-index{font:9px var(--mono);color:var(--gold);direction:ltr;white-space:nowrap}
-.decision h3{font-size:clamp(23px,3vw,34px);font-weight:300;margin:0 0 9px}
-.decision p{font-size:12px;line-height:2.4;color:var(--muted);max-width:670px;margin:0}
-.live-frame{border:1px solid rgba(238,234,225,.16);background:#080808;padding:8px;box-shadow:0 24px 70px rgba(0,0,0,.25)}
-.live-frame iframe{display:block;width:100%;height:560px;border:0;background:#0b0b0b}
-.frame-caption{display:flex;justify-content:space-between;gap:12px;padding:12px 5px 4px;color:var(--dim);font:8px var(--mono);letter-spacing:.08em;direction:ltr}
-.frame-caption span:last-child{direction:rtl;font-family:var(--fa);letter-spacing:0}
-.mobile-frame-wrap{display:flex;justify-content:center;padding:12px 0 5px}
-.mobile-frame{width:min(390px,100%);padding:10px;border:1px solid rgba(238,234,225,.2);border-radius:27px;background:#080808;box-shadow:0 24px 70px rgba(0,0,0,.3)}
-.mobile-frame iframe{display:block;width:100%;height:720px;border:0;border-radius:17px;background:#0b0b0b}
-.note-line{border-right:2px solid var(--gold);padding:8px 16px;margin-top:18px;color:#c9c1b4;font-size:11px;line-height:2.2}
-.build-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 10px}
-.build-item{padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.018)}
-.build-item small{display:block;color:var(--gold);font:8px var(--mono);direction:ltr;margin-bottom:12px}
-.build-item h4{font-size:15px;font-weight:400;margin:0 0 8px}
-.build-item p{font-size:10px;line-height:2.2;color:var(--muted);margin:0}
-.case-result{margin-top:55px}
-.case-result a{display:inline-flex;align-items:center;gap:8px}
-.case-result .result-copy{max-width:650px}
-.case-next{margin-top:52px}
+:root{--ink:#171612;--paper:#eae6dc;--gold:#b9a17a;--muted-cream:#77736b;--hair:rgba(23,22,18,.16);--night:#10100f}
+html,body{background:var(--night);color:#f0eee8}
+.case-header{height:82px;padding:0 clamp(22px,7vw,112px);display:flex;align-items:center;justify-content:space-between;position:absolute;inset:0 0 auto;z-index:10;border-bottom:1px solid rgba(255,255,255,.13)}
+.case-header img{width:145px;max-height:44px;object-fit:contain;object-position:left}
+.case-header a:last-child{font-size:10px;color:#e3ddcf}
+.hero{min-height:min(850px,100svh);height:100svh;max-height:980px;position:relative;display:flex;align-items:flex-end;overflow:hidden;background:#10100f}
+.hero:before{content:"";position:absolute;inset:0;background:url("https://amir-studio.github.io/Swiss-Gallery/hero-desktop.png") center/cover no-repeat;opacity:.54;filter:brightness(.7)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,9,8,.18),rgba(9,9,8,.18)),linear-gradient(0deg,rgba(9,9,8,.92),rgba(9,9,8,.04) 75%)}
+.hero-inner{position:relative;z-index:1;width:100%;padding:0 clamp(24px,9vw,140px) clamp(55px,8vh,95px)}
+.kicker,.eyebrow,.index,.meta-label{font:9px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;direction:ltr}
+.kicker{color:#d2bd96}
+.hero h1{direction:ltr;text-align:left;font:300 clamp(64px,11vw,150px)/.98 "Manrope",sans-serif;letter-spacing:-.075em;margin:24px 0 22px;color:#f3f0e8}
+.hero-lead{max-width:510px;color:#d7d0c2;font-size:13px;line-height:2.3}
+.hero-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:54px;padding-top:16px;border-top:1px solid rgba(255,255,255,.24);color:#c5bfb3;font:8px "DM Mono",monospace;letter-spacing:.1em;direction:ltr}
+.hero-foot span:last-child{direction:rtl;font-family:"Vazirmatn",sans-serif;letter-spacing:0}
+.intro{background:var(--paper);color:var(--ink);padding:clamp(70px,10vw,145px) clamp(24px,9vw,140px)}
+.intro-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:10vw;max-width:1200px;margin:auto}
+.eyebrow{color:#92764b;display:block;margin-bottom:22px}
+.intro h2{font-size:clamp(30px,4vw,54px);font-weight:300;line-height:1.55;margin:0;max-width:550px;color:var(--ink)}
+.intro-copy{max-width:590px;padding-top:6px}
+.intro-copy p{font-size:13px;line-height:2.5;color:#5e5a52;margin:0 0 18px}
+.meta{display:flex;gap:45px;flex-wrap:wrap;border-top:1px solid var(--hair);margin-top:36px;padding-top:20px}
+.meta div{display:grid;gap:7px}
+.meta-label{color:#92764b;font-size:8px}
+.meta-value{font-size:11px;color:#26241f}
+.feature{padding:clamp(75px,10vw,140px) clamp(24px,9vw,140px);background:var(--night);color:#f0eee8}
+.feature-head{max-width:1200px;margin:0 auto 48px;display:grid;grid-template-columns:.7fr 1.3fr;gap:10vw;align-items:end}
+.index{color:#c2a77c;font-size:9px}
+.feature h2{font-size:clamp(30px,4vw,52px);font-weight:300;line-height:1.5;margin:12px 0 0;max-width:650px}
+.feature-head p{font-size:12px;line-height:2.4;color:#b8b2a7;max-width:470px;margin:0 0 5px}
+.visual{max-width:1320px;margin:auto;position:relative}
+.visual img{width:100%;display:block;object-fit:cover}
+.visual.hero-visual img{aspect-ratio:2.05;object-position:center}
+.visual-caption{display:flex;justify-content:space-between;gap:20px;margin-top:14px;color:#8f8a80;font:8px "DM Mono",monospace;letter-spacing:.1em;direction:ltr}
+.visual-caption span:last-child{direction:rtl;font:10px "Vazirmatn",sans-serif;letter-spacing:0}
+.collection{background:var(--paper);color:var(--ink);padding:clamp(75px,10vw,140px) clamp(24px,9vw,140px)}
+.collection-head{max-width:1200px;margin:0 auto 52px;display:flex;justify-content:space-between;align-items:end;gap:30px}
+.collection h2{font-size:clamp(32px,4vw,54px);font-weight:300;line-height:1.5;margin:12px 0 0;color:var(--ink)}
+.collection-head p{max-width:410px;font-size:12px;line-height:2.35;color:#656057;margin:0}
+.watch-grid{max-width:1320px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.watch-grid figure{margin:0}
+.watch-grid img{width:100%;aspect-ratio:1/1.13;object-fit:contain;background:#ded9ce;padding:10%;mix-blend-mode:multiply}
+.watch-grid figcaption{display:flex;justify-content:space-between;gap:10px;padding-top:13px;border-top:1px solid var(--hair);margin-top:12px;color:#4f4b43;font-size:10px}
+.watch-grid figcaption span:last-child{font:8px "DM Mono",monospace;color:#92764b;direction:ltr}
+.collection-note{max-width:1320px;margin:42px auto 0;border-top:1px solid var(--hair);padding-top:17px;display:flex;justify-content:space-between;gap:20px;color:#777168;font-size:10px}
+.mobile{background:#171714;color:#f0eee8;padding:clamp(75px,10vw,140px) clamp(24px,9vw,140px)}
+.mobile-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10vw;align-items:center}
+.mobile h2{font-size:clamp(32px,4vw,54px);font-weight:300;line-height:1.5;margin:14px 0 20px}
+.mobile p{font-size:12px;line-height:2.5;color:#b9b3a8;max-width:420px}
+.mobile-visual{max-width:520px;justify-self:center}
+.mobile-visual img{width:100%;max-height:620px;object-fit:contain}
+.closing{background:var(--paper);color:var(--ink);padding:clamp(70px,9vw,120px) clamp(24px,9vw,140px)}
+.closing-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:end;gap:30px}
+.closing h2{font-size:clamp(32px,4vw,54px);font-weight:300;line-height:1.5;margin:12px 0 0;color:var(--ink)}
+.closing p{font-size:11px;line-height:2.3;color:#625e55;max-width:420px;margin:0 0 6px}
+.closing a{display:inline-block;margin-top:23px;color:#765d38;border-bottom:1px solid #a78b5d;padding-bottom:6px;font-size:11px}
+.site-footer{background:#10100f;border-top:1px solid rgba(255,255,255,.12);padding:24px clamp(22px,7vw,112px);display:flex;align-items:center;justify-content:space-between;gap:18px}
+.site-footer img{width:125px;max-height:38px;object-fit:contain}
+.site-footer span,.site-footer a{font:8px "DM Mono",monospace;letter-spacing:.1em;color:#8e887d}
 @media(max-width:760px){
- .case-hero{padding-top:124px}
- .case-title{font-size:50px}
- .case-lead{font-size:11px}
- .case-body{padding:45px 20px 70px}
- .story-block{grid-template-columns:1fr;gap:13px;padding:25px 0}
- .story-copy p{font-size:11px}
- .decision{padding:38px 0}
- .decision-head{display:block}
- .decision-index{display:block;margin-bottom:12px}
- .decision h3{font-size:25px}
- .decision p{font-size:11px}
- .live-frame{padding:5px}
- .live-frame iframe{height:450px}
- .mobile-frame{width:min(390px,100%);padding:7px;border-radius:22px}
- .mobile-frame iframe{height:690px;border-radius:15px}
- .build-grid{grid-template-columns:1fr;gap:9px}
- .case-hero-note{font-size:7px}
+.case-header{height:70px;padding-inline:22px}.case-header img{width:122px}
+.hero{height:88svh;min-height:650px;max-height:820px}
+.hero:before{background-image:url("https://amir-studio.github.io/Swiss-Gallery/hero-mobile.png");background-position:center 35%;opacity:.52}
+.hero-inner{padding:0 23px 42px}.hero h1{font-size:clamp(57px,16vw,88px);margin:18px 0}
+.hero-lead{font-size:11px;max-width:330px}.hero-foot{margin-top:34px;font-size:7px}
+.intro,.feature,.collection,.mobile,.closing{padding:70px 23px}
+.intro-grid,.feature-head,.mobile-inner{grid-template-columns:1fr;gap:24px}
+.intro h2,.feature h2,.collection h2,.mobile h2,.closing h2{font-size:32px}
+.intro-copy p{font-size:11px}.meta{gap:22px;margin-top:25px}
+.feature-head{margin-bottom:30px}.feature-head p{font-size:11px}
+.visual.hero-visual img{aspect-ratio:1.12;object-position:center}
+.collection-head{display:block;margin-bottom:30px}.collection-head p{margin-top:15px;font-size:11px}
+.watch-grid{grid-template-columns:1fr 1fr;gap:22px 12px}
+.watch-grid figure:last-child{grid-column:1/-1;width:calc(50% - 6px);justify-self:center}
+.watch-grid img{aspect-ratio:1/1.15;padding:8%}
+.watch-grid figcaption{font-size:9px}
+.collection-note{margin-top:30px;font-size:9px}
+.mobile-inner{gap:30px}.mobile-visual{width:min(100%,390px);grid-row:1}
+.mobile p{font-size:11px}
+.closing-inner{display:block}.closing p{margin-top:18px;font-size:11px}
+.site-footer{display:grid;grid-template-columns:1fr 1fr;padding:20px 22px;row-gap:12px}
+.site-footer img{width:112px}.site-footer span:nth-of-type(1){text-align:left}.site-footer span:nth-of-type(2){text-align:right}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header class="case-header">
 <a href="../../" aria-label="AmirStudio"><img src="../../assets/amir-studio-logo.png" alt="AmirStudio"></a>
-<a href="../../#work">← بازگشت به پروژه‌ها</a>
+<a href="../../#work">بازگشت به پروژه‌ها ↗</a>
 </header>
 <main>
-<section class="case-hero">
-<span class="case-kicker">LUXURY RETAIL / DIGITAL EXPERIENCE</span>
-<h1 class="case-title">Swiss Gallery</h1>
-<p class="case-lead">طراحی و توسعه‌ی یک ویترین دیجیتال برای معرفی ساعت‌های لوکس؛ تجربه‌ای که باید در اولین برخورد حس ظرافت را منتقل کند و در ادامه، اطلاعات هر محصول را روشن و قابل‌دسترسی نگه دارد.</p>
-<div class="case-meta">
-<div><small>PROJECT</small><span>Digital watch showcase</span></div>
-<div><small>SCOPE</small><span>طراحی رابط و توسعه‌ی فرانت‌اند</span></div>
-<div><small>FOCUS</small><span>تصویر، محتوا، واکنش‌گرایی</span></div>
-</div>
-<div class="case-hero-note"><span>PROJECT STUDY / 01</span><span>DESIGN PROCESS · INTERFACE · BUILD</span></div>
-</section>
-
-<div class="case-body">
-<section class="story-block">
-<div class="story-label">01 / CONTEXT</div>
-<div class="story-copy">
-<h2>زمینه‌ی پروژه</h2>
-<p>Swiss Gallery به‌عنوان یک ویترین آنلاین برای نمایش ساعت‌های رده‌بالا شکل گرفت. مخاطب باید بتواند در یک مسیر ساده، با فضای برند آشنا شود، مجموعه را مرور کند و مشخصات اولیه‌ی هر ساعت را ببیند.</p>
-<p>این مطالعه بر نسخه‌ی منتشرشده‌ی وب‌سایت و تصمیم‌هایی تمرکز دارد که در رابط قابل مشاهده‌اند؛ نه بر فرض‌هایی درباره‌ی سفارش‌دهنده یا عملکرد تجاری.</p>
+<section class="hero">
+<div class="hero-inner">
+<span class="kicker">AMIRSTUDIO / SELECTED PROJECT 01</span>
+<h1>Swiss Gallery</h1>
+<p class="hero-lead">یک ویترین دیجیتال برای ساعت‌هایی که جزئیات، به‌اندازه‌ی زمان اهمیت دارند.</p>
+<div class="hero-foot"><span>DESIGN STUDY / 2026</span><span>طراحی رابط · توسعه‌ی فرانت‌اند</span></div>
 </div>
 </section>
 
-<section class="story-block">
-<div class="story-label">02 / THE CHALLENGE</div>
-<div class="story-copy">
-<h2>مسئله؛ لوکس بودن بدون مبهم شدن</h2>
-<p>در یک ویترین ساعت، تصویر محصول باید نقطه‌ی تمرکز باشد؛ اما اگر اطلاعات، قیمت و مسیر حرکت کاربر پراکنده باشند، تجربه فقط زیبا می‌ماند و استفاده از آن دشوار می‌شود.</p>
-<p>چالش اصلی، ایجاد تعادل میان <strong>فضای بصری خلوت</strong> و <strong>اطلاعات قابل اسکن</strong> بود؛ به‌خصوص در صفحه‌ای که چند برند و چند مدل را کنار هم قرار می‌دهد.</p>
+<section class="intro">
+<div class="intro-grid">
+<div>
+<span class="eyebrow">THE PROJECT / 01</span>
+<h2>وقتی محصول باید پیش از هر چیز، دیده شود.</h2>
 </div>
-</section>
-
-<section class="story-block">
-<div class="story-label">03 / THE IDEA</div>
-<div class="story-copy">
-<h2>ایده‌ی مرکزی؛ یک گالری دیجیتال</h2>
-<p>به‌جای شبیه‌سازی یک فروشگاه شلوغ، صفحه مثل یک گالری چیده شد: شروعی سینمایی و کم‌جزئیات، سپس ورود تدریجی به مجموعه و بعد اطلاعات تکمیلی درباره‌ی برندها و هویت ساعت‌سازی.</p>
-<p>پالت مشکی و طلایی، تایپوگرافی نمایشی و فاصله‌گذاری سخاوتمندانه برای ساختن این حس به کار رفتند؛ در حالی که کارت‌های محصول باید خوانایی و نظم خود را حفظ می‌کردند.</p>
+<div class="intro-copy">
+<p>Swiss Gallery با یک هدف شکل گرفت: ساختن فضایی دیجیتال برای معرفی ساعت‌های لوکس؛ فضایی که تصویر محصول در آن نقش اول را داشته باشد و اطلاعات، بی‌آنکه مزاحم تجربه شوند، در دسترس بمانند.</p>
+<p>مسئله فقط ساخت یک صفحه‌ی زیبا نبود؛ باید میان حس یک گالری و وضوح یک ویترین کاربردی تعادل برقرار می‌شد.</p>
+<div class="meta">
+<div><span class="meta-label">CATEGORY</span><span class="meta-value">Luxury retail</span></div>
+<div><span class="meta-label">SCOPE</span><span class="meta-value">UI design & front-end</span></div>
+<div><span class="meta-label">FORMAT</span><span class="meta-value">Responsive showcase</span></div>
 </div>
-</section>
-
-<section class="decision">
-<div class="decision-head">
-<div><span class="decision-index">DECISION 01</span><h3>Hero تمام‌صفحه؛ ساختن اولین برخورد</h3><p>بخش آغازین تقریباً تمام ارتفاع صفحه را در اختیار می‌گیرد. تصویر پس‌زمینه با تیرگی و لایه‌ی پوشاننده کنترل شده تا عنوان، پیام و دکمه‌ی ورود به مجموعه در مرکز توجه بمانند. در این پروژه، چیدمان نهایی Hero تک‌ستونه و مرکزی است؛ نه یک تصویر محصول جدا در کنار متن.</p></div>
-</div>
-<div class="live-frame">
-<iframe title="پیش‌نمایش زنده بخش Hero وب‌سایت Swiss Gallery" src="https://amir-studio.github.io/Swiss-Gallery/#hero" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-<div class="frame-caption"><span>LIVE VIEW / HERO</span><span>نمای زنده‌ی بخش آغازین از وب‌سایت اصلی</span></div>
-</div>
-</section>
-
-<section class="decision">
-<div class="decision-head">
-<div><span class="decision-index">DECISION 02</span><h3>مجموعه؛ تکرارپذیری برای مقایسه‌ی سریع</h3><p>شش ساعت در یک شبکه‌ی کارت‌محور نمایش داده می‌شوند. در هر کارت، تصویر محصول اولین لایه است؛ نام مدل و قیمت در لایه‌ی بعدی قرار می‌گیرند و پیوند مرجع قیمت، اطلاعات را از محتوای اصلی جدا نمی‌کند. این ترتیب کمک می‌کند کاربر به‌جای خواندن متن‌های طولانی، مدل‌ها را سریع‌تر مرور و مقایسه کند.</p></div>
-</div>
-<div class="live-frame">
-<iframe title="پیش‌نمایش زنده بخش مجموعه ساعت‌ها در Swiss Gallery" src="https://amir-studio.github.io/Swiss-Gallery/#collection" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-<div class="frame-caption"><span>LIVE VIEW / COLLECTION</span><span>نمای زنده‌ی شبکه‌ی کارت‌های مجموعه</span></div>
-</div>
-</section>
-
-<section class="decision">
-<div class="decision-head">
-<div><span class="decision-index">DECISION 03</span><h3>موبایل؛ حفظ مسیر، نه کوچک‌کردن دسکتاپ</h3><p>در عرض‌های کوچک، ناوبری اصلی به منوی فشرده تبدیل می‌شود و چیدمان محتوا متناسب با فضای عمودی بازآرایی می‌شود. هدف این است که کاربر همچنان از Hero به مجموعه و بخش‌های بعدی برسد، بدون آنکه با نسخه‌ی فشرده و ناخوانای رابط دسکتاپ روبه‌رو شود.</p></div>
-</div>
-<div class="mobile-frame-wrap">
-<div class="mobile-frame">
-<iframe title="پیش‌نمایش زنده نسخه موبایل Swiss Gallery" src="https://amir-studio.github.io/Swiss-Gallery/#hero" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-</div>
-</div>
-<div class="frame-caption"><span>MOBILE VIEW / 390 PX</span><span>نمای واکنش‌گرای وب‌سایت در قاب موبایل</span></div>
-</section>
-
-<section class="story-block">
-<div class="story-label">04 / THE BUILD</div>
-<div class="story-copy">
-<h2>اجرا؛ از ساختار تا رفتار رابط</h2>
-<p>صفحه با بخش‌های مستقل برای Hero، مجموعه، برندها، معرفی و تماس سازمان‌دهی شده است. ساختار واکنش‌گرا با نقاط شکست CSS، و رفتارهایی مانند منوی موبایل، وضعیت پیمایش و حرکت نرم میان بخش‌ها به تجربه اضافه شده‌اند.</p>
-<div class="build-grid">
-<div class="build-item"><small>01 / STRUCTURE</small><h4>بخش‌بندی معنایی</h4><p>تقسیم محتوا به ناحیه‌های مشخص برای مرور مرحله‌به‌مرحله.</p></div>
-<div class="build-item"><small>02 / RESPONSIVE</small><h4>چیدمان تطبیقی</h4><p>بازآرایی منو و شبکه‌ی محتوا برای نمایشگرهای کوچک.</p></div>
-<div class="build-item"><small>03 / INTERACTION</small><h4>رفتارهای رابط</h4><p>منوی موبایل، حالت اسکرول هدر و پیمایش نرم میان بخش‌ها.</p></div>
 </div>
 </div>
 </section>
 
-<section class="story-block">
-<div class="story-label">05 / OUTCOME</div>
-<div class="story-copy">
-<h2>نتیجه؛ یک ویترین قابل مرور</h2>
-<p>خروجی قابل مشاهده، وب‌سایتی است که از معرفی تصویری شروع می‌کند، مجموعه‌ی شش‌مدلی را در قالب کارت‌های تکرارپذیر ارائه می‌دهد و سپس به بخش‌های برند، معرفی و تماس می‌رسد. این پروژه را باید یک <strong>ویترین معرفی دیجیتال</strong> دانست؛ نه فروشگاه کامل با فرایند پرداخت و ثبت سفارش.</p>
-<p>در این مطالعه عمداً عددی درباره‌ی فروش، نرخ تبدیل یا رشد مخاطب ذکر نشده؛ چون داده‌ی اندازه‌گیری‌شده‌ای برای چنین ادعاهایی در دسترس نیست.</p>
-<div class="note-line">نکته‌ی طراحی: کیفیت یک تجربه فقط به جلوه‌ی اولیه وابسته نیست؛ وضوح اطلاعات و قابل‌استفاده‌بودن آن در موبایل هم بخشی از همان تجربه‌اند.</div>
+<section class="feature">
+<div class="feature-head">
+<div><span class="index">01 — FIRST IMPRESSION</span><h2>ورود آرام؛ تصویر در مرکز توجه.</h2></div>
+<p>Hero تمام‌صفحه با تصویر تیره و فضای کنترل‌شده، قبل از هر اطلاعاتی حال‌وهوای برند را منتقل می‌کند. عنوان و مسیر ورود به مجموعه، عمداً از عناصر فرعی جدا نگه داشته شده‌اند.</p>
+</div>
+<div class="visual hero-visual">
+<img src="https://amir-studio.github.io/Swiss-Gallery/hero-desktop.png" alt="تصویر اصلی استفاده‌شده در طراحی Hero وب‌سایت Swiss Gallery" loading="lazy">
+<div class="visual-caption"><span>VISUAL DIRECTION / HERO</span><span>تصویر اصلی و فضای بصری بخش آغازین</span></div>
 </div>
 </section>
 
-<div class="case-result">
-<div class="result-copy"><p>برای دیدن نسخه‌ی اصلی و تعامل مستقیم با تمام بخش‌ها، وارد وب‌سایت Swiss Gallery شوید.</p></div>
-<a href="https://amir-studio.github.io/Swiss-Gallery/" target="_blank" rel="noopener noreferrer">مشاهده وب‌سایت زنده ↗</a>
+<section class="collection">
+<div class="collection-head">
+<div><span class="eyebrow">02 — THE COLLECTION</span><h2>نظم، از دل تکرار.</h2></div>
+<p>در بخش مجموعه، ساختار ثابت کارت‌ها اجازه می‌دهد نگاه بین مدل‌ها حرکت کند؛ تصویر، نام و قیمت در یک ترتیب مشخص قرار می‌گیرند تا مقایسه ساده بماند.</p>
 </div>
-<div class="case-next">
-<a href="../../#work"><span>BACK TO SELECTED WORK</span>بازگشت به همه پروژه‌ها</a>
-<a href="../../#contact"><span>HAVE A PROJECT?</span>شروع یک گفت‌وگو ↗</a>
+<div class="watch-grid">
+<figure><img src="https://amir-studio.github.io/Swiss-Gallery/ap-royal-oak.png" alt="تصویر ساعت در مجموعه Swiss Gallery" loading="lazy"><figcaption><span>Royal Oak</span><span>01 / COLLECTION</span></figcaption></figure>
+<figure><img src="https://amir-studio.github.io/Swiss-Gallery/patek-nautilus.png" alt="تصویر ساعت در مجموعه Swiss Gallery" loading="lazy"><figcaption><span>Nautilus</span><span>02 / COLLECTION</span></figcaption></figure>
+<figure><img src="https://amir-studio.github.io/Swiss-Gallery/rolex-submariner.png" alt="تصویر ساعت در مجموعه Swiss Gallery" loading="lazy"><figcaption><span>Submariner</span><span>03 / COLLECTION</span></figcaption></figure>
 </div>
+<div class="collection-note"><span>PRODUCT PRESENTATION</span><span>تصاویر واقعی محصولات استفاده‌شده در وب‌سایت</span></div>
+</section>
+
+<section class="mobile">
+<div class="mobile-inner">
+<div>
+<span class="index">03 — RESPONSIVE EXPERIENCE</span>
+<h2>همان تجربه؛ در مقیاسی تازه.</h2>
+<p>در موبایل، تصویر و محتوا با فضای عمودی سازگار می‌شوند و مسیر دسترسی به بخش‌ها حفظ می‌شود. نسخه‌ی موبایل قرار نیست دسکتاپ کوچک‌شده باشد؛ باید به‌تنهایی خوانا و قابل استفاده بماند.</p>
 </div>
+<div class="mobile-visual"><img src="https://amir-studio.github.io/Swiss-Gallery/hero-mobile.png" alt="تصویر موبایل استفاده‌شده برای Hero نسخه‌ی موبایل Swiss Gallery" loading="lazy"></div>
+</div>
+</section>
+
+<section class="closing">
+<div class="closing-inner">
+<div><span class="eyebrow">THE OUTCOME / 04</span><h2>یک ویترین دیجیتال؛<br>نه یک فروشگاه شلوغ.</h2></div>
+<div><p>خروجی، وب‌سایتی واکنش‌گرا برای معرفی مجموعه‌ی ساعت‌ها و اطلاعات پایه‌ی هر مدل است. این پروژه ویترین معرفی دیجیتال است و شامل فرایند کامل خرید و پرداخت آنلاین نمی‌شود.</p><a href="https://amir-studio.github.io/Swiss-Gallery/" target="_blank" rel="noopener noreferrer">مشاهده‌ی وب‌سایت زنده ↗</a></div>
+</div>
+</section>
 </main>
 <footer class="site-footer">
-<a href="../../" class="footer-brand"><img src="../../assets/amir-studio-logo.png" alt="AmirStudio"></a>
+<a href="../../"><img src="../../assets/amir-studio-logo.png" alt="AmirStudio"></a>
 <span>DESIGN · BUILD · ELEVATE</span>
 <span>© 2026 AMIRSTUDIO</span>
-<a href="../../#home">بازگشت به بالا ↑</a>
+<a href="../../#work">ALL PROJECTS ↗</a>
 </footer>
 </body>
 </html>

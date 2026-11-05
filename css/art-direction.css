@@ -293,3 +293,13 @@ body.menu-open[data-menu-surface="dark"]::before{background:rgba(245,243,237,.16
  .project-visual{border-radius:14px}
  .project-detail-link{font-size:10px}
 }
+
+/* Final layout calibration */
+.mobile-nav{width:75vw;max-width:none}
+html[dir="rtl"] .hero-brand-lockup{align-items:flex-start}
+.hero-brand-lockup span{direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] .section-shell h2,html[dir="rtl"] .section-shell h3,html[dir="rtl"] .project-caption,html[dir="rtl"] .contact-links,html[dir="rtl"] .contact-form{direction:rtl;text-align:right}
+html[dir="rtl"] .project-caption h3{direction:ltr;unicode-bidi:isolate;text-align:right}
+html[dir="rtl"] .mobile-nav{width:75vw;max-width:none}
+html[dir="ltr"] .mobile-nav{width:75vw;max-width:none}
+@media(max-width:760px){.mobile-nav{width:75vw;max-width:none}.hero-brand-lockup img{width:108px;height:108px}}

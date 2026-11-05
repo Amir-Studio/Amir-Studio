@@ -11,7 +11,7 @@
   window.setTimeout(()=>splash.remove(),reduced?0:760);
   document.body.classList.remove("has-splash");
  };
- const show=()=>window.setTimeout(dismiss,reduced?0:1650);
+ const show=()=>window.setTimeout(dismiss,reduced?0:1100);
  if(document.readyState==="complete")show();
  else{window.addEventListener("load",show,{once:true});window.setTimeout(dismiss,4200);}
 })();

@@ -11,3 +11,18 @@ body{background:linear-gradient(145deg,#ded7ca,#d4ccbe 48%,#d9d1c4)}
 .hero-visual-shade{background:linear-gradient(90deg,#292720,rgba(41,39,32,.9) 38%,rgba(41,39,32,.06) 80%)}
 .work,.studio,.capabilities,.products,.journal,.contact{background:transparent;color:#292720}
 .section-heading h2{color:#292720}.section-heading h2 em{color:#987b50}.section-heading>p{color:#625d53}.eyebrow{color:#987b50}
+
+/* Project captions are dark inset surfaces, not a full-width dark section. */
+.chapter-image{background:#bdb3a3;border:1px solid rgba(48,44,36,.12)}
+.chapter-info{background:linear-gradient(120deg,#302e28,#3b372f);color:#eee8dc;padding:20px 22px 18px;border:1px solid rgba(182,154,109,.24);border-top:0}
+.chapter-info h3{color:#eee8dc}.chapter-info p{color:#c9c1b4}.chapter-link{color:#e4d8c5}.chapter-link span,.chapter-number{color:#d2b98e}
+.work-endline{border-color:rgba(48,44,36,.22);color:#756d60}
+/* Studio mixes a charcoal quote, soft cream text panel and transparent principles. */
+.studio-story{align-items:stretch;gap:clamp(24px,5vw,76px)}
+.studio-quote{background:linear-gradient(135deg,#302e28,#3a362e);color:#eee8dc;border:1px solid rgba(182,154,109,.34);border-right:2px solid #b69a6d;padding:28px 30px}
+.studio-quote p{color:#eee8dc}.studio-quote p em{color:#d2b98e}.quote-credit{color:#bdb3a3}
+.studio-description{background:rgba(238,232,220,.68);border:1px solid rgba(48,44,36,.1);padding:26px 28px}
+.studio-description p{color:#5f594f}.studio-description .text-link{color:#725d3d}
+.studio-principles{border-color:rgba(48,44,36,.22);background:rgba(238,232,220,.3)}
+.studio-principles article{border-color:rgba(48,44,36,.16);padding:25px 22px 30px}
+.studio-principles h3{color:#302e28}.studio-principles p{color:#625d53}.studio-principles span{color:#987b50}

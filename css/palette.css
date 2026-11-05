@@ -1,58 +1,103 @@
-/* Connected palette: shared warm canvas, contained dark and cream surfaces */
-:root{--bg:#d8d0c2;--bg-2:#cfc6b7;--paper:#eee8dc;--ink:#292720;--muted:#625d53;--dim:#81796b;--line:rgba(48,44,36,.18);--gold:#987b50;--gold-light:#b69a6d}
-html,body{background:#d8d0c2;color:#292720}
-body{background:linear-gradient(145deg,#ded7ca,#d4ccbe 48%,#d9d1c4)}
+/* AmirStudio — one continuous warm canvas with balanced charcoal, ivory and champagne details */
+:root{
+  --bg:#d7d0c3;--bg-2:#cfc6b7;--paper:#eee8dc;--ink:#292720;
+  --muted:#625d53;--dim:#81796b;--line:rgba(48,44,36,.18);
+  --gold:#987b50;--gold-light:#c1a77a;
+}
+html,body{background:#d7d0c3;color:var(--ink)}
+body{
+ background:
+  radial-gradient(ellipse at 12% 18%,rgba(244,239,229,.72),transparent 34%),
+  radial-gradient(ellipse at 88% 54%,rgba(190,177,154,.24),transparent 38%),
+  linear-gradient(145deg,#ded7ca 0%,#d4ccbe 48%,#d9d1c4 100%);
+}
 .site-header{border-color:rgba(238,232,220,.24)}
-.site-header .main-nav a,.site-header .header-contact{color:#e5ddcf}
-.site-header.is-scrolled{background:rgba(43,41,35,.92);border-color:rgba(224,211,188,.18)}
-.site-header.is-scrolled .main-nav a,.site-header.is-scrolled .header-contact{color:#e5ddcf}
+.site-header .main-nav a,.site-header .header-contact{color:#eee8dc;text-shadow:0 1px 8px rgba(0,0,0,.25)}
+.site-header.is-scrolled{background:rgba(43,41,35,.9);border-color:rgba(224,211,188,.2)}
+.site-header.is-scrolled .main-nav a,.site-header.is-scrolled .header-contact{color:#eee8dc}
 .hero{background:#292720;color:#eee8dc}
-.hero-visual img{filter:grayscale(.18) saturate(.72) brightness(.78)}
-.hero-visual-shade{background:linear-gradient(90deg,#292720,rgba(41,39,32,.9) 38%,rgba(41,39,32,.06) 80%)}
-.work,.studio,.capabilities,.products,.journal,.contact{background:transparent;color:#292720}
-.section-heading h2{color:#292720}.section-heading h2 em{color:#987b50}.section-heading>p{color:#625d53}.eyebrow{color:#987b50}
+.hero-visual img{filter:grayscale(.16) saturate(.78) brightness(.82)}
+.hero-visual-shade{background:linear-gradient(90deg,#292720 0%,rgba(41,39,32,.88) 35%,rgba(41,39,32,.12) 82%),linear-gradient(0deg,rgba(41,39,32,.3),transparent 45%)}
+.work,.studio,.capabilities,.products,.journal,.contact{background:transparent;color:var(--ink)}
+.section-heading h2{color:#302e28}.section-heading h2 em{color:#987b50}
+.section-heading>p{color:#625d53}.eyebrow{color:#987b50}
 
-/* Project captions are dark inset surfaces, not a full-width dark section. */
-.chapter-image{background:#bdb3a3;border:1px solid rgba(48,44,36,.12)}
-.chapter-info{background:linear-gradient(120deg,#302e28,#3b372f);color:#eee8dc;padding:20px 22px 18px;border:1px solid rgba(182,154,109,.24);border-top:0}
-.chapter-info h3{color:#eee8dc}.chapter-info p{color:#c9c1b4}.chapter-link{color:#e4d8c5}.chapter-link span,.chapter-number{color:#d2b98e}
+/* Work: image stays dominant; caption is a soft paper surface with dark type and gold detail. */
+.chapter-image{background:#bdb3a3;border:1px solid rgba(48,44,36,.14)}
+.chapter-info{
+ background:linear-gradient(112deg,rgba(241,236,226,.94),rgba(220,212,198,.88));
+ color:#302e28;padding:19px 22px 18px;border:1px solid rgba(48,44,36,.13);
+ border-top:2px solid rgba(152,123,80,.55);box-shadow:0 12px 28px rgba(49,43,32,.055)
+}
+.chapter-info h3{color:#302e28}.chapter-info p{color:#625d53}
+.chapter-link{color:#554b3d}.chapter-link span,.chapter-number{color:#c5a979}
+.chapter-number{text-shadow:0 1px 8px #000}
+.chapter-arrow{background:rgba(41,39,32,.24);border-color:rgba(238,232,220,.8)}
 .work-endline{border-color:rgba(48,44,36,.22);color:#756d60}
-/* Studio mixes a charcoal quote, soft cream text panel and transparent principles. */
+
+/* Studio: contrasting quote card balanced by a warm, light reading panel. */
 .studio-story{align-items:stretch;gap:clamp(24px,5vw,76px)}
-.studio-quote{background:linear-gradient(135deg,#302e28,#3a362e);color:#eee8dc;border:1px solid rgba(182,154,109,.34);border-right:2px solid #b69a6d;padding:28px 30px}
-.studio-quote p{color:#eee8dc}.studio-quote p em{color:#d2b98e}.quote-credit{color:#bdb3a3}
-.studio-description{background:rgba(238,232,220,.68);border:1px solid rgba(48,44,36,.1);padding:26px 28px}
+.studio-quote{
+ background:linear-gradient(135deg,#302e28 0%,#403a30 58%,#514633 100%);
+ color:#eee8dc;border:1px solid rgba(182,154,109,.38);border-right:2px solid #b69a6d;
+ padding:28px 30px;box-shadow:0 18px 38px rgba(49,43,32,.09)
+}
+.studio-quote p{color:#eee8dc}.studio-quote p em{color:#d2b98e}
+.quote-mark{color:#c1a77a}.quote-credit{color:#c9c0b1}
+.studio-description{
+ background:linear-gradient(135deg,rgba(244,239,229,.86),rgba(220,212,198,.72));
+ border:1px solid rgba(48,44,36,.12);padding:26px 28px;box-shadow:0 12px 30px rgba(49,43,32,.045)
+}
 .studio-description p{color:#5f594f}.studio-description .text-link{color:#725d3d}
-.studio-principles{border-color:rgba(48,44,36,.22);background:rgba(238,232,220,.3)}
+.studio-principles{border-color:rgba(48,44,36,.22);background:linear-gradient(90deg,rgba(238,232,220,.34),rgba(238,232,220,.12))}
 .studio-principles article{border-color:rgba(48,44,36,.16);padding:25px 22px 30px}
 .studio-principles h3{color:#302e28}.studio-principles p{color:#625d53}.studio-principles span{color:#987b50}
 
-/* Capabilities use individual translucent rows over the same warm canvas. */
+/* Capabilities: no dark slab; individual rows sit softly inside the shared canvas. */
 .capability-list{border:0;display:grid;gap:9px}
-.capability-list article{background:linear-gradient(105deg,rgba(238,232,220,.86),rgba(221,213,200,.72));border:1px solid rgba(48,44,36,.12);padding:18px 22px}
-.capability-list article:hover{padding-inline:28px}
+.capability-list article{
+ background:linear-gradient(105deg,rgba(242,237,227,.88),rgba(218,210,196,.66));
+ border:1px solid rgba(48,44,36,.12);padding:18px 22px;
+ box-shadow:0 5px 18px rgba(49,43,32,.025)
+}
+.capability-list article:hover{padding-inline:28px;background:linear-gradient(105deg,rgba(247,242,232,.96),rgba(226,217,201,.82))}
 .capability-list h3{color:#302e28}.capability-list p{color:#625d53}
 .capability-list small{color:#81796b}.capability-list article>span,.capability-list b{color:#987b50}
-/* Products remain a dark contained panel, not a dark page section. */
-.product-lines{border:0;background:linear-gradient(130deg,#302e28,#39352d);padding:0 26px;box-shadow:0 18px 42px rgba(49,43,32,.08)}
-.product-line{border-color:rgba(238,232,220,.17)}
-.product-line h3{color:#eee8dc}.product-line p{color:#c9c1b4}
-.product-count{color:#d0b98f}.product-action{color:#e5d9c7}
 
-/* Journal combines soft paper cards, dark artwork and fine gold details. */
+/* Products: separate lines, not one oversized dark rectangle. */
+.product-lines{border-top:1px solid rgba(48,44,36,.2);border-bottom:1px solid rgba(48,44,36,.2);background:rgba(238,232,220,.26);padding:0 22px}
+.product-line{border-color:rgba(48,44,36,.17);padding:27px 0}
+.product-line h3{color:#302e28}.product-line p{color:#625d53}
+.product-count{color:#987b50}.product-action{color:#554b3d}
+.product-action:after{background:#987b50}
+
+/* Journal: paper cards, dark artwork and restrained champagne accents. */
 .journal-grid{gap:18px}
-.journal-card{background:rgba(238,232,220,.78);border:1px solid rgba(48,44,36,.12);padding:16px 16px 20px;transition:transform .3s,border-color .3s,background .3s}
-.journal-card:hover{transform:translateY(-4px);background:rgba(244,239,230,.94);border-color:rgba(152,123,80,.4)}
+.journal-card{
+ background:linear-gradient(150deg,rgba(242,237,227,.9),rgba(220,212,198,.72));
+ border:1px solid rgba(48,44,36,.12);padding:16px 16px 20px;
+ transition:transform .3s,border-color .3s,background .3s;box-shadow:0 10px 25px rgba(49,43,32,.04)
+}
+.journal-card:hover{transform:translateY(-4px);background:linear-gradient(150deg,rgba(247,242,232,.98),rgba(226,217,201,.84));border-color:rgba(152,123,80,.4)}
 .journal-no,.journal-meta{color:#987b50}.journal-card h3{color:#302e28}
 .journal-card>p{color:#625d53}.journal-arrow{color:#5d5549}.journal-arrow b{color:#987b50}
-/* Contact pairs a charcoal information card with a readable cream form. */
+
+/* Contact: charcoal intro and warm form share a border and gold details. */
 .contact{gap:clamp(24px,6vw,90px);align-items:stretch}
-.contact-intro{background:linear-gradient(145deg,#302e28,#3a362e);color:#eee8dc;padding:32px clamp(22px,3vw,42px);border:1px solid rgba(182,154,109,.28)}
+.contact-intro{
+ background:linear-gradient(145deg,#302e28 0%,#3b372f 68%,#494031 100%);
+ color:#eee8dc;padding:32px clamp(22px,3vw,42px);
+ border:1px solid rgba(182,154,109,.3);box-shadow:0 16px 34px rgba(49,43,32,.08)
+}
 .contact-intro h2{color:#eee8dc}.contact-intro h2 em{color:#d2b98e}
 .contact-intro .eyebrow{color:#d2b98e}.contact-intro>p{color:#d0c8bb}
 .contact-links,.contact-links a{border-color:rgba(238,232,220,.18)}
 .contact-links small,.contact-links b{color:#d2b98e}.contact-links span{color:#eee8dc}
-.project-form{background:rgba(238,232,220,.82);border:1px solid rgba(48,44,36,.12);padding:30px clamp(20px,3vw,38px);align-content:start}
+.project-form{
+ background:linear-gradient(135deg,rgba(244,239,229,.92),rgba(220,212,198,.82));
+ border:1px solid rgba(48,44,36,.14);padding:30px clamp(20px,3vw,38px);align-content:start;
+ box-shadow:0 16px 34px rgba(49,43,32,.055)
+}
 .project-form label{color:#302e28}
 .project-form input,.project-form select,.project-form textarea{color:#302e28;border-color:rgba(48,44,36,.28)}
 .project-form input::placeholder,.project-form textarea::placeholder{color:#81796b}
@@ -60,14 +105,14 @@ body{background:linear-gradient(145deg,#ded7ca,#d4ccbe 48%,#d9d1c4)}
 .project-form .optional,.project-form .form-note{color:#81796b}
 .form-submit{background:#b69a6d;border-color:#b69a6d;color:#292720}
 .form-submit:hover{background:#c9ae82}
-.site-footer{background:rgba(48,46,40,.96);border-color:rgba(238,232,220,.16);color:#eee8dc}
+.site-footer{background:linear-gradient(110deg,#302e28,#403a30);border-color:rgba(238,232,220,.16);color:#eee8dc}
 .site-footer>span,.site-footer>a:not(.footer-brand){color:#c9c1b4}
 @media(max-width:760px){
  .hero-visual-shade{background:linear-gradient(90deg,rgba(41,39,32,.84),rgba(41,39,32,.28)),linear-gradient(0deg,#292720,rgba(41,39,32,.1) 62%)}
  .chapter-info{padding:15px 14px 14px}
  .studio-story{gap:16px}.studio-quote,.studio-description{padding:22px 19px}
  .capability-list article{padding:16px 14px}.capability-list article:hover{padding-inline:16px}
- .product-lines{padding-inline:15px}.journal-grid{gap:16px}
+ .product-lines{padding-inline:14px}.journal-grid{gap:16px}
  .journal-card{padding:13px 13px 17px}.contact-intro,.project-form{padding:23px 19px}
 }
 @media(prefers-reduced-motion:reduce){.hero-visual img{transform:none}}

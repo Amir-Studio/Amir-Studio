@@ -126,3 +126,40 @@ body.has-splash .hero-content{opacity:0;transform:translateY(16px)}
 .mobile-nav{box-shadow:0 0 0 100vmax rgba(0,0,0,.62)}
 
 body.menu-open .site-header .nav-toggle{visibility:hidden}
+
+
+/* Language switch — understated, editorial and visible on every viewport. */
+.site-header .language-switch{order:1;display:inline-flex;align-items:center;gap:10px;margin-left:auto;margin-right:clamp(18px,3vw,42px);padding:9px 0;border-bottom:1px solid rgba(201,185,149,.58);color:#fdfbf7;font:10px var(--fa);letter-spacing:.04em;white-space:nowrap}
+.site-header .language-switch b{font:9px var(--mono);letter-spacing:.16em;color:#c9b995}
+.site-header .nav-toggle{order:2}
+@media(max-width:760px){.site-header .language-switch{margin-left:auto;margin-right:16px;font-size:10px}.site-header .brand{width:48px;height:48px}.site-header .brand img{width:46px;height:46px}}
+/* Project links are explicit and always visible, not hover-only. */
+.project-visual>span{opacity:1;transform:none;left:auto;right:18px;bottom:18px;padding:11px 15px;background:rgba(26,26,26,.86);color:#fdfbf7;border:1px solid rgba(201,185,149,.38);backdrop-filter:blur(10px);font:10px var(--fa);letter-spacing:0;direction:rtl}
+.project-visual:hover>span,.project-visual:focus-visible>span{opacity:1;transform:translateY(-2px)}
+/* A bespoke live-data preview for the Dollar project, matching its dark dashboard. */
+.dollar-project-visual{display:flex;align-items:center;justify-content:center;overflow:hidden;background:#090a09;padding:clamp(18px,4vw,48px)}
+.dollar-preview{position:relative;width:100%;height:100%;min-height:260px;padding:clamp(18px,3vw,34px);display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(ellipse at 75% 18%,rgba(83,135,100,.13),transparent 45%),linear-gradient(145deg,#151815,#090a09 70%);border:1px solid rgba(180,190,173,.18);color:#f2f0e8;direction:rtl;overflow:hidden}
+.dollar-preview-top,.dollar-preview-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:2}
+.dollar-preview-top b{font:700 clamp(20px,3vw,34px) var(--fa);color:#f2f0e8}
+.dollar-preview-top span,.dollar-preview-bottom{font:8px var(--mono);letter-spacing:.14em;color:#899387;direction:ltr}
+.dollar-preview-stat{display:flex;align-items:baseline;gap:14px;position:relative;z-index:2}
+.dollar-preview-stat small{font:10px var(--fa);color:#aab3a6}
+.dollar-preview-stat strong{font:500 clamp(14px,2vw,23px) var(--fa);color:#f2f0e8}
+.dollar-preview-stat i{font:8px var(--mono);font-style:normal;color:#73b58c;letter-spacing:.14em}
+.dollar-preview svg{position:absolute;left:0;right:0;bottom:35px;width:100%;height:55%;opacity:.9}
+.dollar-preview-bottom{position:relative;z-index:2;padding-top:12px;border-top:1px solid rgba(180,190,173,.15)}
+/* The menu is a full-screen layer: no framed drawer, border or boxed card. */
+.mobile-nav{inset:0;width:100%;height:100dvh;max-width:none;padding:clamp(28px,6vh,70px) clamp(28px,10vw,150px);background:rgba(26,26,26,.97);border:0;border-radius:0;box-shadow:none;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transform:translateY(10px);justify-content:center;gap:0}
+.mobile-nav::before{display:none}
+.mobile-nav.open{transform:none}
+.menu-top{width:100%;max-width:1080px;margin:0 auto clamp(36px,6vh,72px);padding-bottom:22px;border-bottom:1px solid rgba(253,251,247,.14)}
+.mobile-nav>a{width:100%;max-width:1080px;margin:0 auto;padding:clamp(11px,1.7vh,19px) 0;border:0;border-bottom:1px solid rgba(253,251,247,.075);font-size:clamp(30px,4.2vw,54px)}
+.mobile-nav>a:last-child{border-bottom:0}
+.menu-close{border:0;border-radius:0;width:44px;height:44px;font-size:34px;color:#c9b995}
+@media(max-width:760px){.mobile-nav{padding:28px 26px;justify-content:center}.menu-top{margin-bottom:38px}.mobile-nav>a{font-size:clamp(29px,8vw,40px);padding:15px 0}.dollar-preview{min-height:250px;padding:18px}.dollar-preview-stat{flex-wrap:wrap;gap:8px}}
+/* Persian page typography follows its RTL language while retaining the original composition. */
+html[dir="rtl"] .language-switch{direction:rtl}
+html[dir="ltr"] .language-switch{direction:ltr}
+html[dir="ltr"] .project-visual>span{right:auto;left:18px;direction:ltr;font-family:var(--en)}
+html[dir="ltr"] .mobile-nav{direction:ltr}
+html[dir="ltr"] .mobile-nav>a{direction:ltr}

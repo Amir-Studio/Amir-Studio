@@ -122,3 +122,5 @@ body.has-splash .hero-content{opacity:0;transform:translateY(16px)}
 .site-header{display:flex;direction:ltr;justify-content:space-between;align-items:center}
 .site-header .brand{order:0}
 .site-header .nav-toggle{order:1}
+
+.mobile-nav{box-shadow:0 0 0 100vmax rgba(0,0,0,.62)}

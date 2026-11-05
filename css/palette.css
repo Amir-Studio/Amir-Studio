@@ -26,3 +26,15 @@ body{background:linear-gradient(145deg,#ded7ca,#d4ccbe 48%,#d9d1c4)}
 .studio-principles{border-color:rgba(48,44,36,.22);background:rgba(238,232,220,.3)}
 .studio-principles article{border-color:rgba(48,44,36,.16);padding:25px 22px 30px}
 .studio-principles h3{color:#302e28}.studio-principles p{color:#625d53}.studio-principles span{color:#987b50}
+
+/* Capabilities use individual translucent rows over the same warm canvas. */
+.capability-list{border:0;display:grid;gap:9px}
+.capability-list article{background:linear-gradient(105deg,rgba(238,232,220,.86),rgba(221,213,200,.72));border:1px solid rgba(48,44,36,.12);padding:18px 22px}
+.capability-list article:hover{padding-inline:28px}
+.capability-list h3{color:#302e28}.capability-list p{color:#625d53}
+.capability-list small{color:#81796b}.capability-list article>span,.capability-list b{color:#987b50}
+/* Products remain a dark contained panel, not a dark page section. */
+.product-lines{border:0;background:linear-gradient(130deg,#302e28,#39352d);padding:0 26px;box-shadow:0 18px 42px rgba(49,43,32,.08)}
+.product-line{border-color:rgba(238,232,220,.17)}
+.product-line h3{color:#eee8dc}.product-line p{color:#c9c1b4}
+.product-count{color:#d0b98f}.product-action{color:#e5d9c7}

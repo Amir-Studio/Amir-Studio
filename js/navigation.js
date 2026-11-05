@@ -4,8 +4,8 @@
   const nav=document.getElementById("mobileNav");
   const closeButton=nav?.querySelector(".menu-close");
   if(!toggle||!nav)return;
-  const close=()=>{toggle.setAttribute("aria-expanded","false");nav.classList.remove("open");nav.setAttribute("aria-hidden","true");nav.inert=true;document.body.classList.remove("menu-open");};
-  const open=()=>{toggle.setAttribute("aria-expanded","true");nav.classList.add("open");nav.setAttribute("aria-hidden","false");nav.inert=false;document.body.classList.add("menu-open");closeButton?.focus({preventScroll:true});};
+  const close=()=>{toggle.setAttribute("aria-expanded","false");nav.classList.remove("open");nav.setAttribute("aria-hidden","true");nav.inert=true;document.body.classList.remove("menu-open");toggle.setAttribute("aria-label","Open menu");};
+  const open=()=>{toggle.setAttribute("aria-expanded","true");nav.classList.add("open");nav.setAttribute("aria-hidden","false");nav.inert=false;document.body.classList.add("menu-open");toggle.setAttribute("aria-label","Close menu");closeButton?.focus({preventScroll:true});};
   toggle.addEventListener("click",()=>toggle.getAttribute("aria-expanded")==="true"?close():open());
   closeButton?.addEventListener("click",close);
   nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));

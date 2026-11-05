@@ -188,3 +188,37 @@ body{
 }
 
 @media(max-width:760px){.nav-toggle{border-color:rgba(238,232,220,.35)}.nav-toggle i{background:#eee8dc}}
+
+
+/* Brand mark: preserve the circular artwork silhouette. */
+.brand{display:flex;align-items:center;justify-content:flex-start;width:56px;height:56px}
+.brand img,.footer-brand img{width:52px;height:52px;max-height:none;object-fit:cover;object-position:center;border-radius:50%;background:#eee8dc;border:1px solid rgba(193,167,122,.72);padding:3px;box-shadow:0 5px 18px rgba(0,0,0,.12)}
+.footer-brand{display:flex;align-items:center}
+.footer-brand img{width:44px;height:44px}
+@media(max-width:760px){.brand{width:48px;height:48px}.brand img{width:46px;height:46px}.footer-brand img{width:42px;height:42px}}
+
+/* Signature entrance: Delaris-inspired restraint, with AmirStudio's own identity. */
+.splash{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 44%,rgba(193,167,122,.12),transparent 25%),linear-gradient(145deg,#24231f 0%,#171714 58%,#292720 100%);opacity:1;visibility:visible;transition:opacity .85s cubic-bezier(.2,.7,.2,1),visibility .85s}
+.splash::before,.splash::after{content:"";position:absolute;left:50%;top:50%;width:min(76vw,430px);aspect-ratio:1;border:1px solid rgba(193,167,122,.13);border-radius:50%;transform:translate(-50%,-50%)}
+.splash::after{width:min(92vw,520px);border-color:rgba(238,232,220,.055)}
+.splash.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.splash-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:15px;padding:24px;text-align:center;animation:amirstudioReveal 1.25s cubic-bezier(.2,.7,.2,1) both}
+.splash-mark{width:clamp(104px,19vw,142px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#f3eee4,#d8cdbb);border:1px solid rgba(193,167,122,.85);padding:7px;box-shadow:0 0 0 8px rgba(193,167,122,.055),0 18px 65px rgba(0,0,0,.34),0 0 50px rgba(193,167,122,.12)}
+.splash-mark img{width:100%;height:100%;display:block;object-fit:cover;border-radius:50%}
+.splash-name{font:500 clamp(22px,4vw,30px) var(--en);letter-spacing:.055em;color:#eee8dc;direction:ltr}
+.splash-name sup{font-size:.42em;color:#c1a77a;vertical-align:top;margin-left:3px}
+.splash-line{font:8px var(--mono);letter-spacing:.25em;color:#b8a27b;direction:ltr}
+.splash-rule{width:46px;height:1px;margin-top:7px;background:linear-gradient(90deg,transparent,#c1a77a,transparent);transform-origin:center;animation:splashRule 1.8s ease-in-out infinite}
+@keyframes amirstudioReveal{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes splashRule{0%,100%{transform:scaleX(.55);opacity:.45}50%{transform:scaleX(1);opacity:1}}
+
+/* The opening hero blends into the warm canvas instead of ending at a hard edge. */
+.hero{isolation:isolate}
+.hero::after{content:"";position:absolute;z-index:1;pointer-events:none;left:0;right:0;bottom:0;height:clamp(90px,14vw,190px);background:linear-gradient(180deg,rgba(41,39,32,0),rgba(215,208,195,.18) 42%,#d7d0c3 100%)}
+.hero-meta,.hero-index{z-index:2}
+.contact{display:block;padding-top:clamp(76px,9vw,130px);padding-bottom:clamp(76px,9vw,125px)}
+.contact-intro{width:min(100%,1000px);margin-inline:auto}
+.contact-spacer{display:none}
+.contact-links a{transition:padding .25s,border-color .25s}
+.contact-links a:hover{padding-inline:8px;border-color:rgba(193,167,122,.55)}
+@media(prefers-reduced-motion:reduce){.splash-content,.splash-rule{animation:none}.hero::after{height:80px}}

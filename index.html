@@ -22,21 +22,21 @@
 <link rel="stylesheet" href="css/journal.css?v=2">
 <link rel="stylesheet" href="css/contact.css?v=3"><link rel="stylesheet" href="css/products.css?v=2">
 <link rel="stylesheet" href="css/palette.css?v=4">
-<link rel="stylesheet" href="css/art-direction.css?v=6">
+<link rel="stylesheet" href="css/art-direction.css?v=7">
 </head>
 <body class="has-splash">
 <div class="splash-screen" id="siteSplash" aria-label="AmirStudio">
-  <div class="splash-mark"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></div>
+  <div class="splash-content"><div class="splash-mark"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></div><div class="splash-name">AmirStudio<span>®</span></div><span class="splash-rule" aria-hidden="true"></span></div>
 </div>
 
 <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
 <header class="site-header" id="siteHeader">
   <a class="brand" href="#home" aria-label="AmirStudio home"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></a>
   <nav class="main-nav" aria-label="ناوبری اصلی">
-    <a href="#work">پروژه‌ها</a><a href="#studio">استودیو</a><a href="#capabilities">توانمندی‌ها</a><a href="#products">محصولات دیجیتال</a><a href="#journal">ژورنال</a>
+    <a href="#work">پروژه‌ها</a><a href="#studio">استودیو</a><a href="#capabilities">توانمندی‌ها</a><a href="#products">محصولات دیجیتال</a><a href="#journal">یادداشت‌ها</a>
   </nav>
   <a class="header-contact" href="#contact">شروع یک گفت‌وگو <span>↗</span></a>
-  <a class="language-switch" href="index-en.html" aria-label="تغییر زبان به انگلیسی"><span class="language-symbol" aria-hidden="true">◎</span><span class="language-label">تغییر زبان</span><b>EN</b><span class="language-arrow" aria-hidden="true">↗</span></a>
+  <details class="language-menu"><summary><span class="language-symbol" aria-hidden="true">◎</span><span>زبان</span><span class="language-chevron" aria-hidden="true">⌄</span></summary><div class="language-options"><a href="index.html" lang="fa" aria-current="page">فارسی <span>✓</span></a><a href="index-en.html" lang="en">English</a></div></details>
   <button class="nav-toggle" id="navToggle" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobileNav"><i></i><i></i></button>
 </header>
 <nav class="mobile-nav" id="mobileNav" aria-label="منوی اصلی" aria-hidden="true" inert>
@@ -45,7 +45,7 @@
   <a href="#studio"><span>02</span> استودیو</a>
   <a href="#capabilities"><span>03</span> توانمندی‌ها</a>
   <a href="#products"><span>04</span> محصولات دیجیتال</a>
-  <a href="#journal"><span>05</span> ژورنال</a>
+  <a href="#journal"><span>05</span> یادداشت‌ها</a>
   <a href="#contact"><span>06</span> تماس</a>
   <a href="faq.html"><span>07</span> سؤالات متداول</a>
 </nav>
@@ -70,7 +70,7 @@
     <span class="art-caption">FORM STUDY — 001</span>
   </div>
   <div class="hero-content">
-    <div class="hero-brand-lockup" aria-label="AmirStudio"><img src="assets/amir-studio-logo.png" alt=""><span>AMIRSTUDIO</span></div>
+    
     <span class="hero-kicker">استودیوی مستقل طراحی دیجیتال · تأسیس ۲۰۲۶</span>
     <h1 id="heroTitle">مستقل،<br><em>از طراحی.</em></h1>
     <p>تجربه‌های دیجیتال، با نگاهی سنجیده و هدفمند.</p>
@@ -138,11 +138,11 @@
 </section>
 
 <section class="journal section-shell" id="journal">
-  <div class="section-heading"><div><span class="eyebrow">۰۵ / ژورنال</span><h2>یادداشت‌هایی درباره‌ی <em>طراحی.</em></h2></div><p>ایده‌ها، مشاهده‌ها و اصولی که پشت تصمیم‌های طراحی قرار می‌گیرند.</p></div>
+  <div class="section-heading"><div><span class="eyebrow">۰۵ / یادداشت‌ها</span><h2>یادداشت‌هایی درباره‌ی <em>طراحی.</em></h2></div><p>ایده‌ها، مشاهده‌ها و اصولی که پشت تصمیم‌های طراحی قرار می‌گیرند.</p></div>
   <div class="journal-grid">
-    <a class="journal-card" href="journal/less-but-better.html"><span class="journal-no">01 / PRINCIPLES</span><div class="journal-art art-one"><i></i><b></b></div><span class="journal-meta">DESIGN THINKING · 4 MIN READ</span><h3>مینیمالیسم، حذف‌کردن نیست؛ انتخاب‌کردن است.</h3><p>چطور می‌توان بدون خالی‌کردن صفحه، به تجربه‌ای آرام‌تر و دقیق‌تر رسید؟</p><span class="journal-arrow">مطالعه یادداشت <b>↗</b></span></a>
-    <a class="journal-card" href="journal/light-and-hierarchy.html"><span class="journal-no">02 / VISUAL LANGUAGE</span><div class="journal-art art-two"><i></i><b></b></div><span class="journal-meta">VISUAL DESIGN · 3 MIN READ</span><h3>نور، کنتراست و سلسله‌مراتب بصری.</h3><p>چرا توجه کاربر باید هدایت شود، نه اینکه با همه‌چیز هم‌زمان روبه‌رو شود؟</p><span class="journal-arrow">مطالعه یادداشت <b>↗</b></span></a>
-    <a class="journal-card" href="journal/performance-is-design.html"><span class="journal-no">03 / DIGITAL CRAFT</span><div class="journal-art art-three"><i></i><b></b></div><span class="journal-meta">DEVELOPMENT · 5 MIN READ</span><h3>سرعت، بخشی از طراحی است.</h3><p>یک تجربه‌ی زیبا اگر دیر و سنگین باز شود، هنوز تجربه‌ی خوبی نیست.</p><span class="journal-arrow">مطالعه یادداشت <b>↗</b></span></a>
+    <a class="journal-card" href="journal/less-but-better.html"><span class="journal-no">01 / PRINCIPLES</span><img class="journal-photo" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1100&q=85" alt="فضای کاری واقعی و مینیمال یک استودیوی خلاق" loading="lazy"><span class="journal-meta">DESIGN THINKING · 4 MIN READ</span><h3>مینیمالیسم، حذف‌کردن نیست؛ انتخاب‌کردن است.</h3><p>چطور می‌توان بدون خالی‌کردن صفحه، به تجربه‌ای آرام‌تر و دقیق‌تر رسید؟</p><span class="journal-arrow">مطالعه یادداشت <b>↗</b></span></a>
+    <a class="journal-card" href="journal/light-and-hierarchy.html"><span class="journal-no">02 / VISUAL LANGUAGE</span><img class="journal-photo" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1100&q=85" alt="محیط کار طراح در فضای دیجیتال" loading="lazy"><span class="journal-meta">VISUAL DESIGN · 3 MIN READ</span><h3>نور، کنتراست و سلسله‌مراتب بصری.</h3><p>چرا توجه کاربر باید هدایت شود، نه اینکه با همه‌چیز هم‌زمان روبه‌رو شود؟</p><span class="journal-arrow">مطالعه یادداشت <b>↗</b></span></a>
+    <a class="journal-card" href="journal/performance-is-design.html"><span class="journal-no">03 / DIGITAL CRAFT</span><img class="journal-photo" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85" alt="فضای معماری مدرن با نور طبیعی" loading="lazy"><span class="journal-meta">DEVELOPMENT · 5 MIN READ</span><h3>سرعت، بخشی از طراحی است.</h3><p>یک تجربه‌ی زیبا اگر دیر و سنگین باز شود، هنوز تجربه‌ی خوبی نیست.</p><span class="journal-arrow">مطالعه یادداشت <b>↗</b></span></a>
   </div>
 </section>
 
@@ -160,12 +160,12 @@
 </main>
 <footer class="site-footer footer-editorial">
   <a href="#home" class="footer-brand"><img src="assets/amir-studio-logo.png" alt="AmirStudio"></a>
-  <p>استودیوی مستقل طراحی دیجیتال؛ طراحی با نگاهی هدفمند.</p>
+  <p>استودیوی مستقل طراحی دیجیتال؛<br>طراحی با نگاهی هدفمند.</p>
   <nav aria-label="پیوندهای پایین صفحه"><a href="#work">پروژه‌ها</a><a href="#studio">استودیو</a><a href="#capabilities">توانمندی‌ها</a><a href="#contact">تماس</a><a href="faq.html">سؤالات متداول</a></nav>
   <span>© <b id="year">2026</b> AMIRSTUDIO</span>
 </footer>
-<script src="js/splash.js?v=3" defer></script>
+<script src="js/splash.js?v=4" defer></script>
 <script src="js/hero-motion.js?v=1" defer></script>
 <script src="js/contact-form.js?v=1" defer></script>
-<script src="js/navigation.js?v=3" defer></script><script src="js/animations.js?v=3" defer></script><script src="js/main.js?v=3" defer></script>
+<script src="js/navigation.js?v=3" defer></script><script src="js/animations.js?v=3" defer></script><script src="js/main.js?v=4" defer></script>
 </body></html>

@@ -446,3 +446,15 @@ html[dir="ltr"] .footer-editorial p{direction:ltr;text-align:left;justify-self:s
 /* Persian wording for the journal is clear and familiar. */
 html[dir="rtl"] .journal .eyebrow{font-family:var(--fa);letter-spacing:0}
 html[dir="rtl"] .journal .section-heading h2,html[dir="rtl"] .journal .section-heading>p{text-align:right;direction:rtl}
+
+
+/* Splash is the only large logo + wordmark lockup on the homepage. */
+.hero-brand-lockup{display:none!important}
+.splash-screen{z-index:99999;display:flex;align-items:center;justify-content:center}
+.splash-content{gap:18px}
+.splash-mark{width:clamp(184px,25vw,214px);height:auto;aspect-ratio:1;padding:0;border:0;background:transparent;box-shadow:none;overflow:hidden}
+.splash-mark img{width:100%;height:100%;object-fit:contain;transform:scale(.98)}
+.splash-name{font:500 clamp(25px,3.5vw,32px)/1.15 var(--en);letter-spacing:.09em;color:#f2eee5}
+.splash-name span{font-size:.42em;color:#c1a77a;vertical-align:top;margin-left:3px}
+@media(max-width:760px){.splash-mark{width:190px}.splash-content{gap:17px}.splash-name{font-size:27px}}
+@media(prefers-reduced-motion:reduce){.splash-content,.splash-rule{animation:none}}

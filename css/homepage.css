@@ -753,3 +753,22 @@ html[dir="rtl"] .journal .section-heading h2,html[dir="rtl"] .journal .section-h
  .home-faq-answer{padding:0 30px 12px}
  .home-faq-answer p{font-size:9px}
 }
+
+/* Moon Shop portfolio preview — positioned after the data dashboard as a capable demo storefront. */
+.moon-project-visual{padding:clamp(16px,3vw,34px);background:#080a0f;display:flex;align-items:stretch}
+.moon-preview{width:100%;min-height:270px;padding:clamp(16px,2.8vw,30px);display:flex;flex-direction:column;justify-content:space-between;gap:22px;background:radial-gradient(ellipse at 78% 22%,rgba(200,170,120,.16),transparent 42%),linear-gradient(145deg,#111722,#080a0f 72%);border:1px solid rgba(200,170,120,.22);color:#f1eee7;overflow:hidden;direction:rtl}
+.moon-preview-head,.moon-preview-foot{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.moon-preview-head{direction:ltr}
+.moon-preview-symbol{font:36px/1 Georgia,serif;color:#c8aa78}
+.moon-preview-head b{font:600 17px/1 var(--mono);letter-spacing:.12em;color:#f1eee7}
+.moon-preview-head b span{color:#c8aa78}
+.moon-preview-head small,.moon-preview-foot{font:8px var(--mono);letter-spacing:.13em;color:#8c929d}
+.moon-preview-copy{display:flex;flex-direction:column;gap:8px}
+.moon-preview-copy small,.moon-preview-copy>span{font:8px var(--mono);letter-spacing:.14em;color:#c8aa78;direction:ltr}
+.moon-preview-copy strong{font:500 clamp(20px,3vw,32px) var(--fa);color:#f5f1e8}
+.moon-preview-products{display:flex;gap:10px;align-items:center;direction:ltr}
+.moon-tile{display:block;position:relative;flex:1;height:62px;border:1px solid rgba(200,170,120,.2);background:linear-gradient(145deg,rgba(200,170,120,.17),rgba(255,255,255,.025));border-radius:3px}
+.moon-tile:before{content:"";position:absolute;inset:15px 35%;border:1px solid rgba(218,194,151,.7);border-radius:50%}
+.moon-tile.tile-two:before{inset:12px 38%;border-radius:5px;transform:rotate(18deg)}
+.moon-tile.tile-three:before{inset:18px 32%;border-radius:2px}
+.project-status-note{display:block;margin-top:7px;font:9px/1.7 var(--fa);color:#8a8173}

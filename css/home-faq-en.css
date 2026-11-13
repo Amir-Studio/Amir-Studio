@@ -1,0 +1,23 @@
+/* English homepage FAQ — shared visual system, compact nested disclosures. */
+.home-faq{direction:ltr;text-align:left}
+.home-faq-heading h2{font-family:var(--en);letter-spacing:-.045em;line-height:1.12}
+.home-faq-heading h2 em{font-family:var(--en);font-style:italic}
+.home-faq-heading p,.home-faq-footnote,.home-faq-answer p{font-family:var(--en)}
+.home-faq-group>summary{grid-template-columns:42px minmax(0,1fr) auto 22px}
+.home-faq-number,.home-faq-question>summary>span{font-family:var(--mono)}
+.home-faq-group-title,.home-faq-question>summary,.home-faq-count{font-family:var(--en)}
+.home-faq-count{font-size:9px}
+.home-faq-questions{padding:0 42px 18px 58px}
+.home-faq-question>summary{grid-template-columns:28px minmax(0,1fr) 18px;font-size:12px}
+.home-faq-answer{padding:0 40px 14px}
+.home-faq-answer p{font-size:11px;line-height:1.9}
+.home-faq-footnote{font-size:10px}
+@media(max-width:760px){
+ .home-faq-heading h2{font-size:clamp(32px,9vw,42px);line-height:1.1}
+ .home-faq-group>summary{grid-template-columns:28px minmax(0,1fr) auto 18px}
+ .home-faq-group-title{font-size:11px}
+ .home-faq-questions{padding:0 4px 14px 12px}
+ .home-faq-question>summary{grid-template-columns:22px minmax(0,1fr) 16px;font-size:10px}
+ .home-faq-answer{padding:0 30px 12px}
+ .home-faq-answer p{font-size:10px}
+}

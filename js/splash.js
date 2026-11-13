@@ -11,7 +11,10 @@
   window.setTimeout(()=>splash.remove(),reduced?0:760);
   document.body.classList.remove("has-splash");
  };
- const show=()=>window.setTimeout(dismiss,reduced?0:1100);
- if(document.readyState==="complete")show();
- else{window.addEventListener("load",show,{once:true});window.setTimeout(dismiss,4200);}
+ // Do not wait for every image/font to finish downloading before revealing the hero.
+ const show=()=>window.setTimeout(dismiss,reduced?0:850);
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",show,{once:true});
+ else show();
+ // Safety fallback if DOMContentLoaded is delayed for any reason.
+ window.setTimeout(dismiss,2500);
 })();
